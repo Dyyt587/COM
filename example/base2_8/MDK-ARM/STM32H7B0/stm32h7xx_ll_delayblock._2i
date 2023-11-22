@@ -1,0 +1,6 @@
+--c99 --gnu -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/User/Inc -I ../Middlewares/LetterShell/src -I ../Middlewares/LetterShell/extensions/log -I ../Drivers/Units -I ../Middlewares/cpost/src -I ../Middlewares/lwrb -I ../Middlewares/sfsm/sfmem -I ../Middlewares/sfsm/config -I ../Middlewares/sfsm
+-I.\RTE\_STM32H7B0
+-IC:\Users\LENOVO\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include
+-IC:\Users\LENOVO\AppData\Local\Arm\Packs\Keil\STM32H7xx_DFP\3.0.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include
+-D__UVISION_VERSION="537" -D_RTE_ -DSTM32H7B0xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32H7B0xx
+-o stm32h7b0\stm32h7xx_ll_delayblock.o --omf_browse stm32h7b0\stm32h7xx_ll_delayblock.crf --depend stm32h7b0\stm32h7xx_ll_delayblock.d --feedback "STM32H7B0\STM32H7B0.fed" "../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_ll_delayblock.c"
