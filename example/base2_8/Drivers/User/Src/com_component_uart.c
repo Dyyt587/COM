@@ -133,18 +133,19 @@ uint8_t com_uart_rx(struct com_t *com, uint32_t addr, uint8_t *pdata, uint32_t l
 uint8_t com_uart_rx_pack_cplt(com_t *com, uint32_t len)
 {
   // 将接受的数据放入fifo
-  com_task_t rx_task = {
-      .magic_word = COMMAGIC_WORD,
-      .pdata = 0,
-      .len = len,
-//      .pdata_1 = 0,
-      .mode = COM_UART_QUEUE_RX,
-  };
-  kfifo_put_index(com->rx_queue.datefifo, len);
+	com_queue_put_rx(&com->rx_queue,COM_UART_QUEUE_RX,0,len);
+//  com_task_t rx_task = {
+////      .magic_word = COMMAGIC_WORD,
+//      .pdata = 0,
+//      .len = len,
+////      .pdata_1 = 0,
+//      .mode = COM_UART_QUEUE_RX,
+//  };
+//  kfifo_put_index(com->rx_queue.datefifo, len);
   com->rx_cnt.total_cnt++;
-  if (kfifo_get_free(com->rx_queue.taskfifo) < sizeof(rx_task))
-    return 255;
-  kfifo_put(com->rx_queue.taskfifo, (uint8_t *)&rx_task, sizeof(rx_task));
+//  if (kfifo_get_free(com->rx_queue.taskfifo) < sizeof(rx_task))
+//    return 255;
+//  kfifo_put(com->rx_queue.taskfifo, (uint8_t *)&rx_task, sizeof(rx_task));
 
   // 查看是否要重新启动任务
 	return 0;

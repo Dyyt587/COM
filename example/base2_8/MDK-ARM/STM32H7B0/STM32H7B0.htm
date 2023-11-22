@@ -3,7 +3,7 @@
 <title>Static Call Graph - [STM32H7B0\STM32H7B0.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image STM32H7B0\STM32H7B0.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Wed Nov 22 17:27:11 2023
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Wed Nov 22 19:34:37 2023
 <BR><P>
 <H3>Maximum Stack Usage =        508 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -19,12 +19,11 @@ Functions with no stack information
 <H3>
 Mutually Recursive functions
 </H3> <LI><a href="#[9a]">BDMA1_IRQHandler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[9a]">BDMA1_IRQHandler</a><BR>
- <LI><a href="#[26c]">elog_output</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[26c]">elog_output</a><BR>
- <LI><a href="#[28b]">elog_strcpy</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[26c]">elog_output</a><BR>
- <LI><a href="#[26b]">com_check_task_right</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[26c]">elog_output</a><BR>
- <LI><a href="#[275]">com_queue_put</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[26c]">elog_output</a><BR>
- <LI><a href="#[281]">elog_get_filter_tag_lvl</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[26c]">elog_output</a><BR>
- <LI><a href="#[28c]">get_fmt_enabled</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[26c]">elog_output</a><BR>
+ <LI><a href="#[273]">elog_output</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[273]">elog_output</a><BR>
+ <LI><a href="#[28b]">elog_strcpy</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[273]">elog_output</a><BR>
+ <LI><a href="#[275]">com_queue_put</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[273]">elog_output</a><BR>
+ <LI><a href="#[281]">elog_get_filter_tag_lvl</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[273]">elog_output</a><BR>
+ <LI><a href="#[28c]">get_fmt_enabled</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[273]">elog_output</a><BR>
 </UL>
 <P>
 <H3>
@@ -1000,7 +999,7 @@ Global Symbols
 <LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_char_common
 </UL>
 <BR>[Called By]<UL><LI><a href="#[24a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_raw_output
-<LI><a href="#[26c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
+<LI><a href="#[273]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
 <LI><a href="#[262]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sfud_log_info
 </UL>
 
@@ -1020,7 +1019,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sputc
 <LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_char_common
 </UL>
-<BR>[Called By]<UL><LI><a href="#[26c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
+<BR>[Called By]<UL><LI><a href="#[273]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
 </UL>
 
 <P><STRONG><a name="[128]"></a>_printf_pre_padding</STRONG> (Thumb, 44 bytes, Stack size 16 bytes, _printf_pad.o(.text))
@@ -1134,7 +1133,7 @@ Global Symbols
 <P><STRONG><a name="[28a]"></a>strstr</STRONG> (Thumb, 36 bytes, Stack size 12 bytes, strstr.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = strstr
 </UL>
-<BR>[Called By]<UL><LI><a href="#[26c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
+<BR>[Called By]<UL><LI><a href="#[273]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
 </UL>
 
 <P><STRONG><a name="[32d]"></a>strcpy</STRONG> (Thumb, 72 bytes, Stack size 12 bytes, strcpy.o(.text))
@@ -1148,7 +1147,7 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[30f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSetUser
 <LI><a href="#[317]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellRemoveParamQuotes
-<LI><a href="#[26c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
+<LI><a href="#[273]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
 <LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;var_register
 </UL>
 
@@ -1180,9 +1179,6 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[1b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_LTDC_ConfigLayer
 <LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartTasktest
 <LI><a href="#[312]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListItem
-<LI><a href="#[273]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_queue_put_rx
-<LI><a href="#[275]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_queue_put
-<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_uart_rx_pack_cplt
 <LI><a href="#[136]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_memcpy
 </UL>
 
@@ -1197,7 +1193,7 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseNewTask
 <LI><a href="#[312]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListItem
-<LI><a href="#[26c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
+<LI><a href="#[273]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
 </UL>
 
 <P><STRONG><a name="[293]"></a>__aeabi_memclr</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, rt_memclr.o(.text))
@@ -1393,8 +1389,8 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[9d]"></a>_snputc</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, _snputc.o(.text))
-<BR>[Address Reference Count : 2]<UL><LI> __2snprintf.o(.text)
-<LI> vsnprintf.o(.text)
+<BR>[Address Reference Count : 2]<UL><LI> vsnprintf.o(.text)
+<LI> __2snprintf.o(.text)
 </UL>
 <P><STRONG><a name="[142]"></a>_printf_cs_common</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, _printf_char.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = _printf_cs_common &rArr; _printf_str &rArr; _printf_post_padding
@@ -2227,7 +2223,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[1a2]"></a>HAL_I2C_MasterRxCpltCallback</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, sht30.o(i.HAL_I2C_MasterRxCpltCallback))
-<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = HAL_I2C_MasterRxCpltCallback &rArr; com_i2c_rx_cplt &rArr; com_i2c_try_communite &rArr; com_check_task &rArr; com_check_task_right &rArr;  elog_output (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = HAL_I2C_MasterRxCpltCallback &rArr; com_i2c_rx_cplt &rArr; com_i2c_try_communite &rArr; com_check_task &rArr; __kfifo_get_try
 </UL>
 <BR>[Calls]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_i2c_rx_cplt
 </UL>
@@ -2236,7 +2232,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[1a3]"></a>HAL_I2C_MasterTxCpltCallback</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, sht30.o(i.HAL_I2C_MasterTxCpltCallback))
-<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = HAL_I2C_MasterTxCpltCallback &rArr; com_i2c_tx_cplt &rArr; com_i2c_try_communite &rArr; com_check_task &rArr; com_check_task_right &rArr;  elog_output (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = HAL_I2C_MasterTxCpltCallback &rArr; com_i2c_tx_cplt &rArr; com_i2c_try_communite &rArr; com_check_task &rArr; __kfifo_get_try
 </UL>
 <BR>[Calls]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_i2c_tx_cplt
 </UL>
@@ -2793,7 +2789,8 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[1fa]"></a>HAL_UARTEx_RxEventCallback</STRONG> (Thumb, 652 bytes, Stack size 24 bytes, com_uart_port.o(i.HAL_UARTEx_RxEventCallback))
-<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = HAL_UARTEx_RxEventCallback &rArr; com_uart_rx_pack_cplt &rArr; __kfifo_put
+<BR><BR>[Stack]<UL><LI>Max Depth = 320 + Unknown Stack Size
+<LI>Call Chain = HAL_UARTEx_RxEventCallback &rArr; com_uart_rx_pack_cplt &rArr; com_queue_put_rx &rArr; elog_output &rArr;  elog_output (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UARTEx_GetRxEventType
 <LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_uart_rx_pack_cplt
@@ -2848,7 +2845,8 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[201]"></a>HAL_UART_IRQHandler</STRONG> (Thumb, 1172 bytes, Stack size 32 bytes, stm32h7xx_hal_uart.o(i.HAL_UART_IRQHandler))
-<BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = HAL_UART_IRQHandler &rArr; UART_EndTransmit_IT &rArr; HAL_UART_TxCpltCallback &rArr; com_uart_tx_cplt &rArr; com_uart_try_tx &rArr; com_check_task &rArr; com_check_task_right &rArr;  elog_output (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 352 + Unknown Stack Size
+<LI>Call Chain = HAL_UART_IRQHandler &rArr; HAL_UARTEx_RxEventCallback &rArr; com_uart_rx_pack_cplt &rArr; com_queue_put_rx &rArr; elog_output &rArr;  elog_output (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[197]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DMA_Abort
 <LI><a href="#[1d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DMA_Abort_IT
@@ -2916,7 +2914,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[20f]"></a>HAL_UART_TxCpltCallback</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, com_uart_port.o(i.HAL_UART_TxCpltCallback))
-<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = HAL_UART_TxCpltCallback &rArr; com_uart_tx_cplt &rArr; com_uart_try_tx &rArr; com_check_task &rArr; com_check_task_right &rArr;  elog_output (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = HAL_UART_TxCpltCallback &rArr; com_uart_tx_cplt &rArr; com_uart_try_tx &rArr; com_check_task &rArr; __kfifo_get_try
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_uart_tx_cplt
 </UL>
@@ -3213,7 +3211,8 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[47]"></a>UART4_IRQHandler</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, stm32h7xx_it.o(i.UART4_IRQHandler))
-<BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = UART4_IRQHandler &rArr; HAL_UART_IRQHandler &rArr; UART_EndTransmit_IT &rArr; HAL_UART_TxCpltCallback &rArr; com_uart_tx_cplt &rArr; com_uart_try_tx &rArr; com_check_task &rArr; com_check_task_right &rArr;  elog_output (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 360 + Unknown Stack Size
+<LI>Call Chain = UART4_IRQHandler &rArr; HAL_UART_IRQHandler &rArr; HAL_UARTEx_RxEventCallback &rArr; com_uart_rx_pack_cplt &rArr; com_queue_put_rx &rArr; elog_output &rArr;  elog_output (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[201]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_IRQHandler
 </UL>
@@ -3264,7 +3263,8 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[38]"></a>USART1_IRQHandler</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, stm32h7xx_it.o(i.USART1_IRQHandler))
-<BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = USART1_IRQHandler &rArr; HAL_UART_IRQHandler &rArr; UART_EndTransmit_IT &rArr; HAL_UART_TxCpltCallback &rArr; com_uart_tx_cplt &rArr; com_uart_try_tx &rArr; com_check_task &rArr; com_check_task_right &rArr;  elog_output (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 360 + Unknown Stack Size
+<LI>Call Chain = USART1_IRQHandler &rArr; HAL_UART_IRQHandler &rArr; HAL_UARTEx_RxEventCallback &rArr; com_uart_rx_pack_cplt &rArr; com_queue_put_rx &rArr; elog_output &rArr;  elog_output (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[201]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_IRQHandler
 </UL>
@@ -3323,7 +3323,6 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[25a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
 <BR>[Called By]<UL><LI><a href="#[27d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kfifo_put
-<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_uart_rx_pack_cplt
 </UL>
 
 <P><STRONG><a name="[260]"></a>__mathlib_dbl_overflow</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, dunder.o(i.__mathlib_dbl_overflow))
@@ -3386,7 +3385,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[267]"></a>com_check_task</STRONG> (Thumb, 118 bytes, Stack size 32 bytes, com_component.o(i.com_check_task))
-<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = com_check_task &rArr; com_check_task_right &rArr;  elog_output (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = com_check_task &rArr; __kfifo_get_try
 </UL>
 <BR>[Calls]<UL><LI><a href="#[26a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spin_unlock_irqrestore
 <LI><a href="#[269]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spin_lock_irqrestore
@@ -3394,41 +3393,36 @@ Global Symbols
 <LI><a href="#[268]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kfifo_get_used
 <LI><a href="#[25b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kfifo_get_try
 </UL>
-<BR>[Called By]<UL><LI><a href="#[27f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_uart_try_tx
-<LI><a href="#[272]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_i2c_try_communite
+<BR>[Called By]<UL><LI><a href="#[27e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_uart_try_tx
+<LI><a href="#[271]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_i2c_try_communite
 </UL>
 
-<P><STRONG><a name="[26b]"></a>com_check_task_right</STRONG> (Thumb, 44 bytes, Stack size 24 bytes, com_component.o(i.com_check_task_right))
-<BR><BR>[Stack]<UL><LI>Max Depth = 24 + In Cycle
-<LI>Call Chain = com_check_task_right &rArr;  elog_output (Cycle)
-</UL>
-<BR>[Calls]<UL><LI><a href="#[26c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
-</UL>
-<BR>[Called By]<UL><LI><a href="#[267]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_check_task
+<P><STRONG><a name="[26b]"></a>com_check_task_right</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, com_component.o(i.com_check_task_right))
+<BR><BR>[Called By]<UL><LI><a href="#[267]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_check_task
 </UL>
 
-<P><STRONG><a name="[26d]"></a>com_get_time</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, com_component.o(i.com_get_time))
+<P><STRONG><a name="[26c]"></a>com_get_time</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, com_component.o(i.com_get_time))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = com_get_time &rArr; get_system_us
 </UL>
-<BR>[Calls]<UL><LI><a href="#[26e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_system_us
+<BR>[Calls]<UL><LI><a href="#[26d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_system_us
 </UL>
 <BR>[Called By]<UL><LI><a href="#[276]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_tx_wait
 <LI><a href="#[274]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_rx_wait
 </UL>
 
-<P><STRONG><a name="[26f]"></a>com_i2c_init</STRONG> (Thumb, 60 bytes, Stack size 8 bytes, com_component_i2c.o(i.com_i2c_init))
+<P><STRONG><a name="[26e]"></a>com_i2c_init</STRONG> (Thumb, 60 bytes, Stack size 8 bytes, com_component_i2c.o(i.com_i2c_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = com_i2c_init &rArr; com_queue_init &rArr; kfifo_alloc &rArr; kfifo_init &rArr; kmalloc &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
 </UL>
-<BR>[Calls]<UL><LI><a href="#[271]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_queue_init_iic
-<LI><a href="#[270]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_queue_init
+<BR>[Calls]<UL><LI><a href="#[270]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_queue_init_iic
+<LI><a href="#[26f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_queue_init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[24b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sht30_init
 </UL>
 
 <P><STRONG><a name="[bd]"></a>com_i2c_rx_cplt</STRONG> (Thumb, 72 bytes, Stack size 24 bytes, com_component_i2c.o(i.com_i2c_rx_cplt))
-<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = com_i2c_rx_cplt &rArr; com_i2c_try_communite &rArr; com_check_task &rArr; com_check_task_right &rArr;  elog_output (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = com_i2c_rx_cplt &rArr; com_i2c_try_communite &rArr; com_check_task &rArr; __kfifo_get_try
 </UL>
-<BR>[Calls]<UL><LI><a href="#[272]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_i2c_try_communite
+<BR>[Calls]<UL><LI><a href="#[271]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_i2c_try_communite
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_MasterRxCpltCallback
 </UL>
@@ -3438,15 +3432,15 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 320 + Unknown Stack Size
 <LI>Call Chain = com_i2c_start_rx &rArr; com_queue_put_rx &rArr; elog_output &rArr;  elog_output (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[26c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
-<LI><a href="#[272]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_i2c_try_communite
+<BR>[Calls]<UL><LI><a href="#[273]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
+<LI><a href="#[271]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_i2c_try_communite
 <LI><a href="#[274]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_rx_wait
-<LI><a href="#[273]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_queue_put_rx
+<LI><a href="#[272]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_queue_put_rx
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> com_component.o(i.com_init)
 </UL>
-<P><STRONG><a name="[272]"></a>com_i2c_try_communite</STRONG> (Thumb, 104 bytes, Stack size 8 bytes, com_component_i2c.o(i.com_i2c_try_communite))
-<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = com_i2c_try_communite &rArr; com_check_task &rArr; com_check_task_right &rArr;  elog_output (Cycle)
+<P><STRONG><a name="[271]"></a>com_i2c_try_communite</STRONG> (Thumb, 104 bytes, Stack size 8 bytes, com_component_i2c.o(i.com_i2c_try_communite))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = com_i2c_try_communite &rArr; com_check_task &rArr; __kfifo_get_try
 </UL>
 <BR>[Calls]<UL><LI><a href="#[267]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_check_task
 </UL>
@@ -3460,17 +3454,17 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 272 + Unknown Stack Size
 <LI>Call Chain = com_i2c_tx &rArr; elog_output &rArr;  elog_output (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[26c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
-<LI><a href="#[272]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_i2c_try_communite
+<BR>[Calls]<UL><LI><a href="#[273]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
+<LI><a href="#[271]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_i2c_try_communite
 <LI><a href="#[276]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_tx_wait
 <LI><a href="#[275]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_queue_put
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> com_component.o(i.com_init)
 </UL>
 <P><STRONG><a name="[bc]"></a>com_i2c_tx_cplt</STRONG> (Thumb, 62 bytes, Stack size 24 bytes, com_component_i2c.o(i.com_i2c_tx_cplt))
-<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = com_i2c_tx_cplt &rArr; com_i2c_try_communite &rArr; com_check_task &rArr; com_check_task_right &rArr;  elog_output (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = com_i2c_tx_cplt &rArr; com_i2c_try_communite &rArr; com_check_task &rArr; __kfifo_get_try
 </UL>
-<BR>[Calls]<UL><LI><a href="#[272]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_i2c_try_communite
+<BR>[Calls]<UL><LI><a href="#[271]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_i2c_try_communite
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_MasterTxCpltCallback
 </UL>
@@ -3480,7 +3474,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 256 + Unknown Stack Size
 <LI>Call Chain = com_init &rArr; elog_output &rArr;  elog_output (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[26c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
+<BR>[Calls]<UL><LI><a href="#[273]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
 <LI><a href="#[278]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kfifo_alloc
 </UL>
 <BR>[Called By]<UL><LI><a href="#[279]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_init_hal_fast
@@ -3497,41 +3491,40 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[280]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_user_init
 </UL>
 
-<P><STRONG><a name="[270]"></a>com_queue_init</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, com_component.o(i.com_queue_init))
+<P><STRONG><a name="[26f]"></a>com_queue_init</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, com_component.o(i.com_queue_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = com_queue_init &rArr; kfifo_alloc &rArr; kfifo_init &rArr; kmalloc &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
 </UL>
 <BR>[Calls]<UL><LI><a href="#[278]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kfifo_alloc
 </UL>
-<BR>[Called By]<UL><LI><a href="#[26f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_i2c_init
+<BR>[Called By]<UL><LI><a href="#[26e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_i2c_init
 </UL>
 
-<P><STRONG><a name="[271]"></a>com_queue_init_iic</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, com_component.o(i.com_queue_init_iic))
-<BR><BR>[Called By]<UL><LI><a href="#[26f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_i2c_init
+<P><STRONG><a name="[270]"></a>com_queue_init_iic</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, com_component.o(i.com_queue_init_iic))
+<BR><BR>[Called By]<UL><LI><a href="#[26e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_i2c_init
 </UL>
 
-<P><STRONG><a name="[275]"></a>com_queue_put</STRONG> (Thumb, 240 bytes, Stack size 56 bytes, com_component.o(i.com_queue_put))
+<P><STRONG><a name="[275]"></a>com_queue_put</STRONG> (Thumb, 230 bytes, Stack size 56 bytes, com_component.o(i.com_queue_put))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104 + In Cycle
 <LI>Call Chain = com_queue_put &rArr;  elog_output (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[26c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
+<BR>[Calls]<UL><LI><a href="#[273]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
 <LI><a href="#[27d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kfifo_put
 <LI><a href="#[27c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kfifo_get_free
-<LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_uart_tx
 <LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_i2c_tx
 </UL>
 
-<P><STRONG><a name="[273]"></a>com_queue_put_rx</STRONG> (Thumb, 136 bytes, Stack size 48 bytes, com_component.o(i.com_queue_put_rx))
+<P><STRONG><a name="[272]"></a>com_queue_put_rx</STRONG> (Thumb, 126 bytes, Stack size 48 bytes, com_component.o(i.com_queue_put_rx))
 <BR><BR>[Stack]<UL><LI>Max Depth = 280 + Unknown Stack Size
 <LI>Call Chain = com_queue_put_rx &rArr; elog_output &rArr;  elog_output (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[26c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
+<BR>[Calls]<UL><LI><a href="#[273]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
 <LI><a href="#[27d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kfifo_put
 <LI><a href="#[27c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kfifo_get_free
-<LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_i2c_start_rx
+<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_uart_rx_pack_cplt
 </UL>
 
 <P><STRONG><a name="[27a]"></a>com_register_driver</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, com_component.o(i.com_register_driver))
@@ -3565,7 +3558,7 @@ Global Symbols
 <P><STRONG><a name="[274]"></a>com_rx_wait</STRONG> (Thumb, 70 bytes, Stack size 32 bytes, com_component.o(i.com_rx_wait))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = com_rx_wait &rArr; com_get_time &rArr; get_system_us
 </UL>
-<BR>[Calls]<UL><LI><a href="#[26d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_get_time
+<BR>[Calls]<UL><LI><a href="#[26c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_get_time
 </UL>
 <BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_i2c_start_rx
 </UL>
@@ -3573,19 +3566,16 @@ Global Symbols
 <P><STRONG><a name="[276]"></a>com_tx_wait</STRONG> (Thumb, 70 bytes, Stack size 32 bytes, com_component.o(i.com_tx_wait))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = com_tx_wait &rArr; com_get_time &rArr; get_system_us
 </UL>
-<BR>[Calls]<UL><LI><a href="#[26d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_get_time
+<BR>[Calls]<UL><LI><a href="#[26c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_get_time
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_i2c_tx
 </UL>
 
-<P><STRONG><a name="[b9]"></a>com_uart_rx_pack_cplt</STRONG> (Thumb, 140 bytes, Stack size 48 bytes, com_component_uart.o(i.com_uart_rx_pack_cplt))
-<BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = com_uart_rx_pack_cplt &rArr; __kfifo_put
+<P><STRONG><a name="[b9]"></a>com_uart_rx_pack_cplt</STRONG> (Thumb, 30 bytes, Stack size 16 bytes, com_component_uart.o(i.com_uart_rx_pack_cplt))
+<BR><BR>[Stack]<UL><LI>Max Depth = 296 + Unknown Stack Size
+<LI>Call Chain = com_uart_rx_pack_cplt &rArr; com_queue_put_rx &rArr; elog_output &rArr;  elog_output (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[26a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spin_unlock_irqrestore
-<LI><a href="#[269]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spin_lock_irqrestore
-<LI><a href="#[27e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kfifo_get_used
-<LI><a href="#[25c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kfifo_put
-<LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
+<BR>[Calls]<UL><LI><a href="#[272]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_queue_put_rx
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UARTEx_RxEventCallback
 </UL>
@@ -3596,8 +3586,8 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> com_component.o(i.com_init)
 </UL>
-<P><STRONG><a name="[27f]"></a>com_uart_try_tx</STRONG> (Thumb, 60 bytes, Stack size 8 bytes, com_component_uart.o(i.com_uart_try_tx))
-<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = com_uart_try_tx &rArr; com_check_task &rArr; com_check_task_right &rArr;  elog_output (Cycle)
+<P><STRONG><a name="[27e]"></a>com_uart_try_tx</STRONG> (Thumb, 60 bytes, Stack size 8 bytes, com_component_uart.o(i.com_uart_try_tx))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = com_uart_try_tx &rArr; com_check_task &rArr; __kfifo_get_try
 </UL>
 <BR>[Calls]<UL><LI><a href="#[267]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_check_task
 </UL>
@@ -3608,7 +3598,7 @@ Global Symbols
 <P><STRONG><a name="[b6]"></a>com_uart_tx</STRONG> (Thumb, 62 bytes, Stack size 32 bytes, com_component_uart.o(i.com_uart_tx))
 <BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = com_uart_tx &rArr; com_queue_put &rArr;  elog_output (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[27f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_uart_try_tx
+<BR>[Calls]<UL><LI><a href="#[27e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_uart_try_tx
 <LI><a href="#[275]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_queue_put
 </UL>
 <BR>[Called By]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;userShellWrite
@@ -3617,10 +3607,10 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> com_component.o(i.com_init)
 </UL>
 <P><STRONG><a name="[b8]"></a>com_uart_tx_cplt</STRONG> (Thumb, 82 bytes, Stack size 24 bytes, com_component_uart.o(i.com_uart_tx_cplt))
-<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = com_uart_tx_cplt &rArr; com_uart_try_tx &rArr; com_check_task &rArr; com_check_task_right &rArr;  elog_output (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = com_uart_tx_cplt &rArr; com_uart_try_tx &rArr; com_check_task &rArr; __kfifo_get_try
 </UL>
-<BR>[Calls]<UL><LI><a href="#[27f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_uart_try_tx
-<LI><a href="#[27e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kfifo_get_used
+<BR>[Calls]<UL><LI><a href="#[27e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_uart_try_tx
+<LI><a href="#[27f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kfifo_get_used
 </UL>
 <BR>[Called By]<UL><LI><a href="#[20f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_TxCpltCallback
 </UL>
@@ -3639,12 +3629,12 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 56 + In Cycle
 <LI>Call Chain = elog_get_filter_tag_lvl &rArr;  elog_output (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[26c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
+<BR>[Calls]<UL><LI><a href="#[273]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
 <LI><a href="#[284]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output_unlock
 <LI><a href="#[282]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output_lock
 <LI><a href="#[283]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncmp
 </UL>
-<BR>[Called By]<UL><LI><a href="#[26c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
+<BR>[Called By]<UL><LI><a href="#[273]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
 </UL>
 
 <P><STRONG><a name="[242]"></a>elog_init</STRONG> (Thumb, 76 bytes, Stack size 8 bytes, elog.o(i.elog_init))
@@ -3660,12 +3650,12 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartTasktest
 </UL>
 
-<P><STRONG><a name="[26c]"></a>elog_output</STRONG> (Thumb, 816 bytes, Stack size 80 bytes, elog.o(i.elog_output))
+<P><STRONG><a name="[273]"></a>elog_output</STRONG> (Thumb, 816 bytes, Stack size 80 bytes, elog.o(i.elog_output))
 <BR><BR>[Stack]<UL><LI>Max Depth = 232 + Unknown Stack Size
  + In Cycle
 <LI>Call Chain = elog_output &rArr;  elog_output (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[26c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
+<BR>[Calls]<UL><LI><a href="#[273]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
 <LI><a href="#[28b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_strcpy
 <LI><a href="#[290]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_port_output
 <LI><a href="#[28d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_port_get_time
@@ -3686,7 +3676,7 @@ Global Symbols
 <LI><a href="#[245]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_start
 <LI><a href="#[244]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_set_text_color_enabled
 <LI><a href="#[243]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_set_fmt
-<LI><a href="#[26c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
+<LI><a href="#[273]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
 <LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;var
 <LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;time
 <LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tim_ctrl
@@ -3700,9 +3690,8 @@ Global Symbols
 <LI><a href="#[28c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_fmt_enabled
 <LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_i2c_tx
 <LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_i2c_start_rx
-<LI><a href="#[273]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_queue_put_rx
+<LI><a href="#[272]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_queue_put_rx
 <LI><a href="#[275]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_queue_put
-<LI><a href="#[26b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_check_task_right
 <LI><a href="#[277]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_init
 </UL>
 
@@ -3712,7 +3701,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[291]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_port_output_lock
 </UL>
 <BR>[Called By]<UL><LI><a href="#[24a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_raw_output
-<LI><a href="#[26c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
+<LI><a href="#[273]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
 <LI><a href="#[281]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_get_filter_tag_lvl
 </UL>
 
@@ -3731,20 +3720,20 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[292]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_port_output_unlock
 </UL>
 <BR>[Called By]<UL><LI><a href="#[24a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_raw_output
-<LI><a href="#[26c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
+<LI><a href="#[273]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
 <LI><a href="#[281]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_get_filter_tag_lvl
 </UL>
 
 <P><STRONG><a name="[28e]"></a>elog_port_get_p_info</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, elog_port.o(i.elog_port_get_p_info))
-<BR><BR>[Called By]<UL><LI><a href="#[26c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
+<BR><BR>[Called By]<UL><LI><a href="#[273]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
 </UL>
 
 <P><STRONG><a name="[28f]"></a>elog_port_get_t_info</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, elog_port.o(i.elog_port_get_t_info))
-<BR><BR>[Called By]<UL><LI><a href="#[26c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
+<BR><BR>[Called By]<UL><LI><a href="#[273]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
 </UL>
 
 <P><STRONG><a name="[28d]"></a>elog_port_get_time</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, elog_port.o(i.elog_port_get_time))
-<BR><BR>[Called By]<UL><LI><a href="#[26c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
+<BR><BR>[Called By]<UL><LI><a href="#[273]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
 </UL>
 
 <P><STRONG><a name="[285]"></a>elog_port_init</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, elog_port.o(i.elog_port_init))
@@ -3757,7 +3746,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_uart_tx
 </UL>
 <BR>[Called By]<UL><LI><a href="#[24a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_raw_output
-<LI><a href="#[26c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
+<LI><a href="#[273]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
 </UL>
 
 <P><STRONG><a name="[291]"></a>elog_port_output_lock</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, elog_port.o(i.elog_port_output_lock))
@@ -3786,7 +3775,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 264 + Unknown Stack Size
 <LI>Call Chain = elog_set_filter_lvl &rArr; elog_output &rArr;  elog_output (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[26c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
+<BR>[Calls]<UL><LI><a href="#[273]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
 </UL>
 <BR>[Called By]<UL><LI><a href="#[242]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_init
 </UL>
@@ -3795,7 +3784,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 264 + Unknown Stack Size
 <LI>Call Chain = elog_set_fmt &rArr; elog_output &rArr;  elog_output (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[26c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
+<BR>[Calls]<UL><LI><a href="#[273]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
 </UL>
 <BR>[Called By]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartTasktest
 </UL>
@@ -3804,7 +3793,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 264 + Unknown Stack Size
 <LI>Call Chain = elog_set_output_enabled &rArr; elog_output &rArr;  elog_output (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[26c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
+<BR>[Calls]<UL><LI><a href="#[273]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
 </UL>
 <BR>[Called By]<UL><LI><a href="#[245]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_start
 </UL>
@@ -3813,7 +3802,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 264 + Unknown Stack Size
 <LI>Call Chain = elog_set_text_color_enabled &rArr; elog_output &rArr;  elog_output (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[26c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
+<BR>[Calls]<UL><LI><a href="#[273]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
 </UL>
 <BR>[Called By]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartTasktest
 <LI><a href="#[242]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_init
@@ -3823,7 +3812,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 280 + Unknown Stack Size
 <LI>Call Chain = elog_start &rArr; elog_set_output_enabled &rArr; elog_output &rArr;  elog_output (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[26c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
+<BR>[Calls]<UL><LI><a href="#[273]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
 <LI><a href="#[294]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_set_output_enabled
 </UL>
 <BR>[Called By]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartTasktest
@@ -3833,9 +3822,9 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 40 + In Cycle
 <LI>Call Chain = elog_strcpy &rArr;  elog_output (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[26c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
+<BR>[Calls]<UL><LI><a href="#[273]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
 </UL>
-<BR>[Called By]<UL><LI><a href="#[26c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
+<BR>[Called By]<UL><LI><a href="#[273]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
 </UL>
 
 <P><STRONG><a name="[a0]"></a>fputc</STRONG> (Thumb, 20 bytes, Stack size 16 bytes, common_1.o(i.fputc))
@@ -3861,7 +3850,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[299]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;update_perf_counter
 </UL>
 
-<P><STRONG><a name="[26e]"></a>get_system_us</STRONG> (Thumb, 66 bytes, Stack size 24 bytes, perf_counter.o(i.get_system_us))
+<P><STRONG><a name="[26d]"></a>get_system_us</STRONG> (Thumb, 66 bytes, Stack size 24 bytes, perf_counter.o(i.get_system_us))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = get_system_us
 </UL>
 <BR>[Calls]<UL><LI><a href="#[297]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_systick
@@ -3869,7 +3858,7 @@ Global Symbols
 <LI><a href="#[296]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__get_PRIMASK
 </UL>
 <BR>[Called By]<UL><LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;time
-<LI><a href="#[26d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_get_time
+<LI><a href="#[26c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_get_time
 </UL>
 
 <P><STRONG><a name="[25d]"></a>init_cycle_counter</STRONG> (Thumb, 114 bytes, Stack size 24 bytes, perf_counter.o(i.init_cycle_counter))
@@ -3900,7 +3889,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 368 + Unknown Stack Size
 <LI>Call Chain = ins330_show_test &rArr; elog_output &rArr;  elog_output (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[26c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
+<BR>[Calls]<UL><LI><a href="#[273]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
 </UL>
 <BR>[Called By]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartTasktest
 </UL>
@@ -3920,7 +3909,7 @@ Global Symbols
 <LI><a href="#[29c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;is_power_of_2
 <LI><a href="#[29d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUG_ON
 </UL>
-<BR>[Called By]<UL><LI><a href="#[270]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_queue_init
+<BR>[Called By]<UL><LI><a href="#[26f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_queue_init
 <LI><a href="#[277]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_init
 </UL>
 
@@ -4119,7 +4108,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[240]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osDelay
 <LI><a href="#[2e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SystemReset
-<LI><a href="#[26c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
+<LI><a href="#[273]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> commend.o(shellCommand)
 </UL>
@@ -4136,7 +4125,7 @@ Global Symbols
 <LI>Call Chain = sfud &rArr; sfud_test &rArr; sfud_demo &rArr; sfud_write &rArr; aai_write &rArr; page256_or_1_byte_write &rArr; set_write_enabled &rArr; sfud_log_info &rArr; elog_output &rArr;  elog_output (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[2e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sfud_test
-<LI><a href="#[26c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
+<LI><a href="#[273]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
 <LI><a href="#[2e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
 <LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strtol
 </UL>
@@ -4175,7 +4164,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 272 + Unknown Stack Size
 <LI>Call Chain = sfud_log_info &rArr; elog_output &rArr;  elog_output (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[26c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
+<BR>[Calls]<UL><LI><a href="#[273]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
 <LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vsnprintf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sfud_read
@@ -4661,7 +4650,7 @@ Global Symbols
 <P><STRONG><a name="[24b]"></a>sht30_init</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, sht30.o(i.sht30_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = sht30_init &rArr; com_i2c_init &rArr; com_queue_init &rArr; kfifo_alloc &rArr; kfifo_init &rArr; kmalloc &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
 </UL>
-<BR>[Calls]<UL><LI><a href="#[26f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_i2c_init
+<BR>[Calls]<UL><LI><a href="#[26e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_i2c_init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartTasktest
 </UL>
@@ -4671,7 +4660,6 @@ Global Symbols
 <LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;userShellRead
 <LI><a href="#[267]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_check_task
 <LI><a href="#[27d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kfifo_put
-<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_uart_rx_pack_cplt
 </UL>
 
 <P><STRONG><a name="[26a]"></a>spin_unlock_irqrestore</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, kfifo.o(i.spin_unlock_irqrestore))
@@ -4679,7 +4667,6 @@ Global Symbols
 <LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;userShellRead
 <LI><a href="#[267]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_check_task
 <LI><a href="#[27d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kfifo_put
-<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_uart_rx_pack_cplt
 </UL>
 
 <P><STRONG><a name="[ce]"></a>tim_ctrl</STRONG> (Thumb, 240 bytes, Stack size 40 bytes, commend.o(i.tim_ctrl))
@@ -4690,7 +4677,7 @@ Global Symbols
 <LI><a href="#[249]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tim_pwm_set_duty
 <LI><a href="#[31e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tim_pwm_get_freq
 <LI><a href="#[31d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tim_pwm_get_duty
-<LI><a href="#[26c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
+<LI><a href="#[273]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
 <LI><a href="#[258]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atof
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> commend.o(shellCommand)
@@ -4744,7 +4731,7 @@ Global Symbols
 <LI>Call Chain = tim_pwm_set_freq &rArr; elog_output &rArr;  elog_output (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[249]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tim_pwm_set_duty
-<LI><a href="#[26c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
+<LI><a href="#[273]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
 <LI><a href="#[320]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tim_pwm_get_reload
 <LI><a href="#[31f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tim_pwm_get_cmp
 <LI><a href="#[322]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;calculate_timer_values
@@ -4757,8 +4744,8 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 296 + Unknown Stack Size
 <LI>Call Chain = time &rArr; elog_output &rArr;  elog_output (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[26e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_system_us
-<LI><a href="#[26c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
+<BR>[Calls]<UL><LI><a href="#[26d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_system_us
+<LI><a href="#[273]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
 <LI><a href="#[321]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_l2f
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> commend.o(shellCommand)
@@ -5029,7 +5016,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 508 + Unknown Stack Size
 <LI>Call Chain = var &rArr; __hardfp_atof &rArr; __strtod_int &rArr; _local_sscanf &rArr; _scanf_real &rArr; _scanf_really_real &rArr; _fp_value &rArr; _btod_etento &rArr; _btod_emul &rArr; _e2e
 </UL>
-<BR>[Calls]<UL><LI><a href="#[26c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
+<BR>[Calls]<UL><LI><a href="#[273]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
 <LI><a href="#[258]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atof
 <LI><a href="#[2e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
 <LI><a href="#[131]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;atoi
@@ -5689,7 +5676,7 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[21a]"></a>I2C_ITMasterCplt</STRONG> (Thumb, 288 bytes, Stack size 24 bytes, stm32h7xx_hal_i2c.o(i.I2C_ITMasterCplt))
-<BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = I2C_ITMasterCplt &rArr; HAL_I2C_MasterTxCpltCallback &rArr; com_i2c_tx_cplt &rArr; com_i2c_try_communite &rArr; com_check_task &rArr; com_check_task_right &rArr;  elog_output (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = I2C_ITMasterCplt &rArr; HAL_I2C_MasterTxCpltCallback &rArr; com_i2c_tx_cplt &rArr; com_i2c_try_communite &rArr; com_check_task &rArr; __kfifo_get_try
 </UL>
 <BR>[Calls]<UL><LI><a href="#[19f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_ITError
 <LI><a href="#[216]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_Flush_TXDR
@@ -5704,7 +5691,7 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[21d]"></a>I2C_ITMasterSeqCplt</STRONG> (Thumb, 98 bytes, Stack size 8 bytes, stm32h7xx_hal_i2c.o(i.I2C_ITMasterSeqCplt))
-<BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = I2C_ITMasterSeqCplt &rArr; HAL_I2C_MasterTxCpltCallback &rArr; com_i2c_tx_cplt &rArr; com_i2c_try_communite &rArr; com_check_task &rArr; com_check_task_right &rArr;  elog_output (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = I2C_ITMasterSeqCplt &rArr; HAL_I2C_MasterTxCpltCallback &rArr; com_i2c_tx_cplt &rArr; com_i2c_try_communite &rArr; com_check_task &rArr; __kfifo_get_try
 </UL>
 <BR>[Calls]<UL><LI><a href="#[215]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_Disable_IRQ
 <LI><a href="#[1a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_MasterTxCpltCallback
@@ -5743,7 +5730,7 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[a4]"></a>I2C_Master_ISR_DMA</STRONG> (Thumb, 352 bytes, Stack size 32 bytes, stm32h7xx_hal_i2c.o(i.I2C_Master_ISR_DMA))
-<BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = I2C_Master_ISR_DMA &rArr; I2C_ITMasterCplt &rArr; HAL_I2C_MasterTxCpltCallback &rArr; com_i2c_tx_cplt &rArr; com_i2c_try_communite &rArr; com_check_task &rArr; com_check_task_right &rArr;  elog_output (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = I2C_Master_ISR_DMA &rArr; I2C_ITMasterCplt &rArr; HAL_I2C_MasterTxCpltCallback &rArr; com_i2c_tx_cplt &rArr; com_i2c_try_communite &rArr; com_check_task &rArr; __kfifo_get_try
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_TransferConfig
 <LI><a href="#[21d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_ITMasterSeqCplt
@@ -5757,7 +5744,7 @@ Local Symbols
 <LI> stm32h7xx_hal_i2c.o(i.I2C_Enable_IRQ)
 </UL>
 <P><STRONG><a name="[a7]"></a>I2C_Master_ISR_IT</STRONG> (Thumb, 408 bytes, Stack size 32 bytes, stm32h7xx_hal_i2c.o(i.I2C_Master_ISR_IT))
-<BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = I2C_Master_ISR_IT &rArr; I2C_ITMasterCplt &rArr; HAL_I2C_MasterTxCpltCallback &rArr; com_i2c_tx_cplt &rArr; com_i2c_try_communite &rArr; com_check_task &rArr; com_check_task_right &rArr;  elog_output (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = I2C_Master_ISR_IT &rArr; I2C_ITMasterCplt &rArr; HAL_I2C_MasterTxCpltCallback &rArr; com_i2c_tx_cplt &rArr; com_i2c_try_communite &rArr; com_check_task &rArr; __kfifo_get_try
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_TransferConfig
 <LI><a href="#[21d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_ITMasterSeqCplt
@@ -5914,7 +5901,8 @@ Local Symbols
 <LI> stm32h7xx_hal_uart.o(i.UART_Start_Receive_DMA)
 </UL>
 <P><STRONG><a name="[b4]"></a>UART_DMAReceiveCplt</STRONG> (Thumb, 174 bytes, Stack size 16 bytes, stm32h7xx_hal_uart.o(i.UART_DMAReceiveCplt))
-<BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = UART_DMAReceiveCplt &rArr; HAL_UARTEx_RxEventCallback &rArr; com_uart_rx_pack_cplt &rArr; __kfifo_put
+<BR><BR>[Stack]<UL><LI>Max Depth = 336 + Unknown Stack Size
+<LI>Call Chain = UART_DMAReceiveCplt &rArr; HAL_UARTEx_RxEventCallback &rArr; com_uart_rx_pack_cplt &rArr; com_queue_put_rx &rArr; elog_output &rArr;  elog_output (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[252]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_RxCpltCallback
 <LI><a href="#[1fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UARTEx_RxEventCallback
@@ -5922,7 +5910,8 @@ Local Symbols
 <BR>[Address Reference Count : 1]<UL><LI> stm32h7xx_hal_uart.o(i.UART_Start_Receive_DMA)
 </UL>
 <P><STRONG><a name="[b5]"></a>UART_DMARxHalfCplt</STRONG> (Thumb, 38 bytes, Stack size 16 bytes, stm32h7xx_hal_uart.o(i.UART_DMARxHalfCplt))
-<BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = UART_DMARxHalfCplt &rArr; HAL_UARTEx_RxEventCallback &rArr; com_uart_rx_pack_cplt &rArr; __kfifo_put
+<BR><BR>[Stack]<UL><LI>Max Depth = 336 + Unknown Stack Size
+<LI>Call Chain = UART_DMARxHalfCplt &rArr; HAL_UARTEx_RxEventCallback &rArr; com_uart_rx_pack_cplt &rArr; com_queue_put_rx &rArr; elog_output &rArr;  elog_output (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[253]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_RxHalfCpltCallback
 <LI><a href="#[1fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UARTEx_RxEventCallback
@@ -5930,7 +5919,7 @@ Local Symbols
 <BR>[Address Reference Count : 1]<UL><LI> stm32h7xx_hal_uart.o(i.UART_Start_Receive_DMA)
 </UL>
 <P><STRONG><a name="[ab]"></a>UART_DMATransmitCplt</STRONG> (Thumb, 84 bytes, Stack size 16 bytes, stm32h7xx_hal_uart.o(i.UART_DMATransmitCplt))
-<BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = UART_DMATransmitCplt &rArr; HAL_UART_TxCpltCallback &rArr; com_uart_tx_cplt &rArr; com_uart_try_tx &rArr; com_check_task &rArr; com_check_task_right &rArr;  elog_output (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = UART_DMATransmitCplt &rArr; HAL_UART_TxCpltCallback &rArr; com_uart_tx_cplt &rArr; com_uart_try_tx &rArr; com_check_task &rArr; __kfifo_get_try
 </UL>
 <BR>[Calls]<UL><LI><a href="#[20f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_TxCpltCallback
 </UL>
@@ -5950,7 +5939,7 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[204]"></a>UART_EndTransmit_IT</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, stm32h7xx_hal_uart.o(i.UART_EndTransmit_IT))
-<BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = UART_EndTransmit_IT &rArr; HAL_UART_TxCpltCallback &rArr; com_uart_tx_cplt &rArr; com_uart_try_tx &rArr; com_check_task &rArr; com_check_task_right &rArr;  elog_output (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = UART_EndTransmit_IT &rArr; HAL_UART_TxCpltCallback &rArr; com_uart_tx_cplt &rArr; com_uart_try_tx &rArr; com_check_task &rArr; __kfifo_get_try
 </UL>
 <BR>[Calls]<UL><LI><a href="#[20f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_TxCpltCallback
 </UL>
@@ -6417,9 +6406,9 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 32 + In Cycle
 <LI>Call Chain = get_fmt_enabled &rArr;  elog_output (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[26c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
+<BR>[Calls]<UL><LI><a href="#[273]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
 </UL>
-<BR>[Called By]<UL><LI><a href="#[26c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
+<BR>[Called By]<UL><LI><a href="#[273]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
 </UL>
 
 <P><STRONG><a name="[261]"></a>aai_write</STRONG> (Thumb, 300 bytes, Stack size 48 bytes, sfud.o(i.aai_write))
@@ -6507,7 +6496,7 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[268]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kfifo_get_used
 </UL>
-<BR>[Called By]<UL><LI><a href="#[273]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_queue_put_rx
+<BR>[Called By]<UL><LI><a href="#[272]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_queue_put_rx
 <LI><a href="#[275]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_queue_put
 </UL>
 
@@ -6524,13 +6513,12 @@ Local Symbols
 <LI><a href="#[269]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spin_lock_irqrestore
 <LI><a href="#[25c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kfifo_put
 </UL>
-<BR>[Called By]<UL><LI><a href="#[273]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_queue_put_rx
+<BR>[Called By]<UL><LI><a href="#[272]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_queue_put_rx
 <LI><a href="#[275]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_queue_put
 </UL>
 
-<P><STRONG><a name="[27e]"></a>kfifo_get_used</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, com_component_uart.o(i.kfifo_get_used))
+<P><STRONG><a name="[27f]"></a>kfifo_get_used</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, com_component_uart.o(i.kfifo_get_used))
 <BR><BR>[Called By]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_uart_tx_cplt
-<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;com_uart_rx_pack_cplt
 </UL>
 
 <P><STRONG><a name="[29b]"></a>ins330_analysis_packet</STRONG> (Thumb, 490 bytes, Stack size 0 bytes, ins330.o(i.ins330_analysis_packet))
@@ -6539,20 +6527,20 @@ Local Symbols
 
 <P><STRONG><a name="[296]"></a>__get_PRIMASK</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, perf_counter.o(i.__get_PRIMASK))
 <BR><BR>[Called By]<UL><LI><a href="#[25d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_cycle_counter
-<LI><a href="#[26e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_system_us
+<LI><a href="#[26d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_system_us
 <LI><a href="#[299]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;update_perf_counter
 <LI><a href="#[295]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_system_ticks
 </UL>
 
 <P><STRONG><a name="[298]"></a>__set_PRIMASK</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, perf_counter.o(i.__set_PRIMASK))
 <BR><BR>[Called By]<UL><LI><a href="#[25d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_cycle_counter
-<LI><a href="#[26e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_system_us
+<LI><a href="#[26d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_system_us
 <LI><a href="#[299]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;update_perf_counter
 <LI><a href="#[295]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_system_ticks
 </UL>
 
 <P><STRONG><a name="[297]"></a>check_systick</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, perf_counter.o(i.check_systick))
-<BR><BR>[Called By]<UL><LI><a href="#[26e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_system_us
+<BR><BR>[Called By]<UL><LI><a href="#[26d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_system_us
 <LI><a href="#[295]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_system_ticks
 </UL>
 

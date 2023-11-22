@@ -43,7 +43,7 @@ typedef struct
 
 enum
 {
-    COM_UART_QUEUE_TX,
+    COM_UART_QUEUE_TX= 0xff00ff00+1,
     COM_UART_QUEUE_TX_STAGE1 = (COM_UART_QUEUE_TX + 1), // 用于环形缓冲区的调转
     COM_UART_QUEUE_TX_STAGE2 = (COM_UART_QUEUE_TX + 2), // 用于环形缓冲区的调转
     COM_UART_QUEUE_RX,
@@ -61,7 +61,7 @@ enum
 };
 typedef struct
 {
-    uint32_t magic_word;
+    //uint32_t magic_word;
     uint32_t addr;
     uint8_t *pdata;
     uint32_t len;

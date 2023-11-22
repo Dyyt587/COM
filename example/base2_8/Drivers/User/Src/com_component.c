@@ -114,7 +114,7 @@ void com_queue_free(com_queue_t *queue)
 int8_t com_queue_put(com_queue_t *queue, uint32_t mode, uint32_t addr, uint8_t *pdata, uint32_t length)
 {
     com_task_t task = {
-        .magic_word = COMMAGIC_WORD,
+    //    .magic_word = COMMAGIC_WORD,
         .pdata = pdata,
         .len = length,
 //        .pdata_1 = pdata,
@@ -175,7 +175,7 @@ int8_t com_queue_put(com_queue_t *queue, uint32_t mode, uint32_t addr, uint8_t *
 int8_t com_queue_put_rx(com_queue_t *queue, uint32_t mode, uint32_t addr, uint32_t length)
 {
     com_task_t task = {
-        .magic_word = COMMAGIC_WORD,
+  //      .magic_word = COMMAGIC_WORD,
         .pdata = queue->datefifo->buffer + (queue->datefifo->out & (queue->datefifo->size - 1)),
         .len = length,
 //        .pdata_1 = queue->datefifo->buffer + (queue->datefifo->out & (queue->datefifo->size - 1)),
@@ -207,26 +207,27 @@ int8_t com_queue_get(com_queue_t *queue, uint8_t *pdata, uint32_t *length)
 
 bool com_check_task_right(com_t *com, com_queue_t *queue, com_task_t *task)
 {
-    if ((task->magic_word == COMMAGIC_WORD) )//&& (task->pdata == task->pdata_1))
-    {
-        //        if (kfifo_get_used(queue->datefifo) < com->task.len)
-        //        {
-        //            // 数据有问题，退出
-        //            // TODO:待完善解决方案
-        //          log_e("iic date error!!!!!!!!!!!\n");
-        //					COM_TX_UNLOCK(com);
-        //					COM_RX_UNLOCK(com);
-        //
-        //          return false;
-        //        }
-        return true;
-    }
-    else
-    {
-        log_e("task date error!!!!!!!!!!!\n");
+    // if ((task->magic_word == COMMAGIC_WORD) )//&& (task->pdata == task->pdata_1))
+    // {
+    //     //        if (kfifo_get_used(queue->datefifo) < com->task.len)
+    //     //        {
+    //     //            // 数据有问题，退出
+    //     //            // TODO:待完善解决方案
+    //     //          log_e("iic date error!!!!!!!!!!!\n");
+    //     //					COM_TX_UNLOCK(com);
+    //     //					COM_RX_UNLOCK(com);
+    //     //
+    //     //          return false;
+    //     //        }
+    //     return true;
+    // }
+    // else
+    // {
+    //     log_e("task date error!!!!!!!!!!!\n");
 
-        return false;
-    }
+    //     return false;
+    // }
+    return true;
 }
 
 bool com_check_task(com_t *com, com_queue_t *queue, com_task_t *task)
@@ -234,7 +235,7 @@ bool com_check_task(com_t *com, com_queue_t *queue, com_task_t *task)
     // 检查任务，没有就返回了
     // if (com_check_task(com, queue) == false)
     //     return false;
-    if (kfifo_get_used(queue->taskfifo) == 0)
+    if (kfifo_get_used(queue->taskfifo) <= sizeof(com_task_t))
     {
         return false;
     }
