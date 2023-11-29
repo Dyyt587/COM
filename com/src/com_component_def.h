@@ -24,7 +24,7 @@
 #define COM_TX_UNLOCK(com) (ClrBit(com->lock, TX))
 
 #define COM_RX_LOCK(com) (SetBit(com->lock, RX))
-#define COM_RX_UNLOCK(com) (ClrBit(com->lock, TX))
+#define COM_RX_UNLOCK(com) (ClrBit(com->lock, RX))
 
 #define COM_IS_TX_LOCK(com) GET_BIT(com->lock, TX)
 #define COM_IS_RX_LOCK(com) GET_BIT(com->lock, RX)
@@ -58,14 +58,18 @@ enum
     COM_SPI_QUEUE_TX_STAGE1 = (COM_SPI_QUEUE_TX + 1), // 用于环形缓冲区的调转
     COM_SPI_QUEUE_TX_STAGE2 = (COM_SPI_QUEUE_TX + 2), // 用于环形缓冲区的调转
     COM_SPI_QUEUE_RX,
+    COM_SPI_QUEUE_RX_STAGE1 = (COM_SPI_QUEUE_RX + 1), // 用于环形缓冲区的调转
+    COM_SPI_QUEUE_RX_STAGE2 = (COM_SPI_QUEUE_RX + 2), // 用于环形缓冲区的调转
+    
+    COM_SPI_QUEUE_TXRX,
 };
 typedef struct
 {
-    uint32_t magic_word;
+    //uint32_t magic_word;
     uint32_t addr;
     uint8_t *pdata;
     uint32_t len;
-    uint8_t *pdata_1;
+    //uint8_t *pdata_1;
     uint32_t mode;
 } com_task_t;
 
@@ -82,6 +86,7 @@ typedef struct com_t
     uint8_t lock;
 
     void (*ll_tx)(struct com_t *com);
+    void (*ll_txrx)(struct com_t *com);
     com_task_t task_1;
     com_task_cnt_t tx_cnt;
 

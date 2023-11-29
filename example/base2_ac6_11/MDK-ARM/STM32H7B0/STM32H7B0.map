@@ -4532,28 +4532,6 @@ Section Cross References
     common.o(.ARM.exidx.text.printf_test) refers (Special) to use_no_semi_2.o(.text) for __use_no_semihosting
     common.o(.ARM.exidx.text.printf_test) refers to common.o(.text.printf_test) for [Anonymous Symbol]
     common.o(.bss.__stdout) refers (Special) to use_no_semi_2.o(.text) for __use_no_semihosting
-    kfifo.o(.ARM.exidx.text.spin_lock_irqrestore) refers to kfifo.o(.text.spin_lock_irqrestore) for [Anonymous Symbol]
-    kfifo.o(.ARM.exidx.text.spin_unlock_irqrestore) refers to kfifo.o(.text.spin_unlock_irqrestore) for [Anonymous Symbol]
-    kfifo.o(.ARM.exidx.text.is_power_of_2) refers to kfifo.o(.text.is_power_of_2) for [Anonymous Symbol]
-    kfifo.o(.text.kmalloc) refers to h1_alloc.o(.text) for malloc
-    kfifo.o(.ARM.exidx.text.kmalloc) refers to kfifo.o(.text.kmalloc) for [Anonymous Symbol]
-    kfifo.o(.text.kfree) refers to h1_free.o(.text) for free
-    kfifo.o(.ARM.exidx.text.kfree) refers to kfifo.o(.text.kfree) for [Anonymous Symbol]
-    kfifo.o(.text.kfifo_init) refers to h1_alloc.o(.text) for malloc
-    kfifo.o(.ARM.exidx.text.kfifo_init) refers to kfifo.o(.text.kfifo_init) for [Anonymous Symbol]
-    kfifo.o(.ARM.exidx.text.BUG_ON) refers to kfifo.o(.text.BUG_ON) for [Anonymous Symbol]
-    kfifo.o(.text.kfifo_alloc) refers to h1_alloc.o(.text) for malloc
-    kfifo.o(.text.kfifo_alloc) refers to h1_free.o(.text) for free
-    kfifo.o(.ARM.exidx.text.kfifo_alloc) refers to kfifo.o(.text.kfifo_alloc) for [Anonymous Symbol]
-    kfifo.o(.ARM.exidx.text.roundup_pow_of_two) refers to kfifo.o(.text.roundup_pow_of_two) for [Anonymous Symbol]
-    kfifo.o(.text.__kfifo_put) refers to rt_memcpy_v6.o(.text) for __aeabi_memcpy
-    kfifo.o(.ARM.exidx.text.__kfifo_put) refers to kfifo.o(.text.__kfifo_put) for [Anonymous Symbol]
-    kfifo.o(.text.__kfifo_get) refers to rt_memcpy_v6.o(.text) for __aeabi_memcpy
-    kfifo.o(.ARM.exidx.text.__kfifo_get) refers to kfifo.o(.text.__kfifo_get) for [Anonymous Symbol]
-    kfifo.o(.text.__kfifo_put_try) refers to rt_memcpy_v6.o(.text) for __aeabi_memcpy
-    kfifo.o(.ARM.exidx.text.__kfifo_put_try) refers to kfifo.o(.text.__kfifo_put_try) for [Anonymous Symbol]
-    kfifo.o(.text.__kfifo_get_try) refers to rt_memcpy_v6.o(.text) for __aeabi_memcpy
-    kfifo.o(.ARM.exidx.text.__kfifo_get_try) refers to kfifo.o(.text.__kfifo_get_try) for [Anonymous Symbol]
     com_uart_port.o(.text.ll_uart_tx) refers to stm32h7xx_hal_uart.o(.text.HAL_UART_Transmit_DMA) for HAL_UART_Transmit_DMA
     com_uart_port.o(.ARM.exidx.text.ll_uart_tx) refers to com_uart_port.o(.text.ll_uart_tx) for [Anonymous Symbol]
     com_uart_port.o(.text.ll_uart_rx) refers to stm32h7xx_hal_uart_ex.o(.text.HAL_UARTEx_ReceiveToIdle_DMA) for HAL_UARTEx_ReceiveToIdle_DMA
@@ -4585,6 +4563,69 @@ Section Cross References
     com_uart_port.o(.ARM.exidx.text.HAL_UARTEx_RxEventCallback) refers to com_uart_port.o(.text.HAL_UARTEx_RxEventCallback) for [Anonymous Symbol]
     com_uart_port.o(.text.HAL_UART_ErrorCallback) refers to stm32h7xx_hal_uart.o(.text.HAL_UART_GetError) for HAL_UART_GetError
     com_uart_port.o(.ARM.exidx.text.HAL_UART_ErrorCallback) refers to com_uart_port.o(.text.HAL_UART_ErrorCallback) for [Anonymous Symbol]
+    dqueue.o(.text.__dqueue_get) refers to strcmpv7m_pel.o(.text) for strcmp
+    dqueue.o(.ARM.exidx.text.__dqueue_get) refers to dqueue.o(.text.__dqueue_get) for [Anonymous Symbol]
+    sht30.o(.text.ll_iic_tx) refers to i2c.o(.bss.hi2c3) for hi2c3
+    sht30.o(.text.ll_iic_tx) refers to stm32h7xx_hal_i2c.o(.text.HAL_I2C_Master_Seq_Transmit_DMA) for HAL_I2C_Master_Seq_Transmit_DMA
+    sht30.o(.ARM.exidx.text.ll_iic_tx) refers to sht30.o(.text.ll_iic_tx) for [Anonymous Symbol]
+    sht30.o(.text.ll_iic_rx) refers to i2c.o(.bss.hi2c3) for hi2c3
+    sht30.o(.text.ll_iic_rx) refers to stm32h7xx_hal_i2c.o(.text.HAL_I2C_Master_Seq_Receive_DMA) for HAL_I2C_Master_Seq_Receive_DMA
+    sht30.o(.text.ll_iic_rx) refers to stm32h7xx_hal_i2c.o(.text.HAL_I2C_Master_Seq_Receive_IT) for HAL_I2C_Master_Seq_Receive_IT
+    sht30.o(.ARM.exidx.text.ll_iic_rx) refers to sht30.o(.text.ll_iic_rx) for [Anonymous Symbol]
+    sht30.o(.text.sht30_init) refers to sht30.o(.bss.com_i2c1) for com_i2c1
+    sht30.o(.text.sht30_init) refers to com_component_i2c.o(.text.com_i2c_init) for com_i2c_init
+    sht30.o(.text.sht30_init) refers to sht30.o(.text.ll_iic_tx) for ll_iic_tx
+    sht30.o(.text.sht30_init) refers to sht30.o(.text.ll_iic_rx) for ll_iic_rx
+    sht30.o(.ARM.exidx.text.sht30_init) refers to sht30.o(.text.sht30_init) for [Anonymous Symbol]
+    sht30.o(.text.report_tempRH_json) refers to sht30.o(.text.SHT30_SampleData) for SHT30_SampleData
+    sht30.o(.text.report_tempRH_json) refers to sht30.o(.rodata.str1.1) for .L.str
+    sht30.o(.text.report_tempRH_json) refers to elog.o(.text.elog_output) for elog_output
+    sht30.o(.ARM.exidx.text.report_tempRH_json) refers to sht30.o(.text.report_tempRH_json) for [Anonymous Symbol]
+    sht30.o(.text.SHT30_SampleData) refers to sht30.o(.bss.com_i2c1) for com_i2c1
+    sht30.o(.text.SHT30_SampleData) refers to com_component_i2c.o(.text.com_i2c_tx) for com_i2c_tx
+    sht30.o(.text.SHT30_SampleData) refers to sht30.o(.bss.flag_rx) for flag_rx
+    sht30.o(.text.SHT30_SampleData) refers to com_component_i2c.o(.text.com_i2c_start_rx) for com_i2c_start_rx
+    sht30.o(.text.SHT30_SampleData) refers to sht30.o(.rodata.str1.1) for .L__FUNCTION__.SHT30_SampleData
+    sht30.o(.text.SHT30_SampleData) refers to elog.o(.text.elog_output) for elog_output
+    sht30.o(.text.SHT30_SampleData) refers to kfifo.o(.text.spin_lock_irqrestore) for spin_lock_irqrestore
+    sht30.o(.text.SHT30_SampleData) refers to kfifo.o(.text.__kfifo_get) for __kfifo_get
+    sht30.o(.text.SHT30_SampleData) refers to kfifo.o(.text.spin_unlock_irqrestore) for spin_unlock_irqrestore
+    sht30.o(.ARM.exidx.text.SHT30_SampleData) refers to sht30.o(.text.SHT30_SampleData) for [Anonymous Symbol]
+    sht30.o(.text.HAL_I2C_MasterTxCpltCallback) refers to sht30.o(.bss.com_i2c1) for com_i2c1
+    sht30.o(.text.HAL_I2C_MasterTxCpltCallback) refers to com_component_i2c.o(.text.com_i2c_tx_cplt) for com_i2c_tx_cplt
+    sht30.o(.ARM.exidx.text.HAL_I2C_MasterTxCpltCallback) refers to sht30.o(.text.HAL_I2C_MasterTxCpltCallback) for [Anonymous Symbol]
+    sht30.o(.text.HAL_I2C_MasterRxCpltCallback) refers to sht30.o(.bss.com_i2c1) for com_i2c1
+    sht30.o(.text.HAL_I2C_MasterRxCpltCallback) refers to com_component_i2c.o(.text.com_i2c_rx_cplt) for com_i2c_rx_cplt
+    sht30.o(.text.HAL_I2C_MasterRxCpltCallback) refers to sht30.o(.bss.flag_rx) for flag_rx
+    sht30.o(.ARM.exidx.text.HAL_I2C_MasterRxCpltCallback) refers to sht30.o(.text.HAL_I2C_MasterRxCpltCallback) for [Anonymous Symbol]
+    tim_pwm.o(.text.tim_pwm_auto_updata_clock) refers to tim_pwm.o(.data.tim_tab) for tim_tab
+    tim_pwm.o(.ARM.exidx.text.tim_pwm_auto_updata_clock) refers to tim_pwm.o(.text.tim_pwm_auto_updata_clock) for [Anonymous Symbol]
+    tim_pwm.o(.ARM.exidx.text.tim_auto_updata_clock) refers to tim_pwm.o(.text.tim_auto_updata_clock) for [Anonymous Symbol]
+    tim_pwm.o(.ARM.exidx.text.tim_pwm_init) refers to tim_pwm.o(.text.tim_pwm_init) for [Anonymous Symbol]
+    tim_pwm.o(.ARM.exidx.text.tim_pwm_set_duty) refers to tim_pwm.o(.text.tim_pwm_set_duty) for [Anonymous Symbol]
+    tim_pwm.o(.ARM.exidx.text.tim_pwm_get_reload) refers to tim_pwm.o(.text.tim_pwm_get_reload) for [Anonymous Symbol]
+    tim_pwm.o(.ARM.exidx.text.tim_pwm_get_duty) refers to tim_pwm.o(.text.tim_pwm_get_duty) for [Anonymous Symbol]
+    tim_pwm.o(.ARM.exidx.text.tim_pwm_get_cmp) refers to tim_pwm.o(.text.tim_pwm_get_cmp) for [Anonymous Symbol]
+    tim_pwm.o(.ARM.exidx.text.calculate_timer_values) refers to tim_pwm.o(.text.calculate_timer_values) for [Anonymous Symbol]
+    tim_pwm.o(.ARM.exidx.text.tim_pwm_get_psc) refers to tim_pwm.o(.text.tim_pwm_get_psc) for [Anonymous Symbol]
+    tim_pwm.o(.text.tim_pwm_set_freq) refers to tim_pwm.o(.text.calculate_timer_values) for calculate_timer_values
+    tim_pwm.o(.text.tim_pwm_set_freq) refers to tim_pwm.o(.text.tim_pwm_set_duty) for tim_pwm_set_duty
+    tim_pwm.o(.text.tim_pwm_set_freq) refers to tim_pwm.o(.rodata.str1.1) for .L.str
+    tim_pwm.o(.text.tim_pwm_set_freq) refers to elog.o(.text.elog_output) for elog_output
+    tim_pwm.o(.ARM.exidx.text.tim_pwm_set_freq) refers to tim_pwm.o(.text.tim_pwm_set_freq) for [Anonymous Symbol]
+    tim_pwm.o(.text.tim_pwm_get_freq) refers to ffltll_clz.o(x$fpl$ffltll) for __aeabi_l2f
+    tim_pwm.o(.ARM.exidx.text.tim_pwm_get_freq) refers to tim_pwm.o(.text.tim_pwm_get_freq) for [Anonymous Symbol]
+    tim_pwm.o(.text.tim_pwm_start) refers to stm32h7xx_hal_tim.o(.text.HAL_TIM_PWM_Start) for HAL_TIM_PWM_Start
+    tim_pwm.o(.ARM.exidx.text.tim_pwm_start) refers to tim_pwm.o(.text.tim_pwm_start) for [Anonymous Symbol]
+    tim_pwm.o(.text.tim_pwm_stop) refers to stm32h7xx_hal_tim.o(.text.HAL_TIM_PWM_Stop) for HAL_TIM_PWM_Stop
+    tim_pwm.o(.ARM.exidx.text.tim_pwm_stop) refers to tim_pwm.o(.text.tim_pwm_stop) for [Anonymous Symbol]
+    tim_pwm.o(.ARM.exidx.text.tim_updata_clock) refers to tim_pwm.o(.text.tim_updata_clock) for [Anonymous Symbol]
+    tim_pwm.o(.ARM.exidx.text.tim_pwm_get_clock) refers to tim_pwm.o(.text.tim_pwm_get_clock) for [Anonymous Symbol]
+    tim_pwm.o(.data.tim_tab) refers to stm32h7xx_hal_rcc.o(.text.HAL_RCC_GetPCLK1Freq) for HAL_RCC_GetPCLK1Freq
+    ins330.o(.ARM.exidx.text.ins330_init) refers to ins330.o(.text.ins330_init) for [Anonymous Symbol]
+    ins330.o(.ARM.exidx.text.ins330_show_test) refers to ins330.o(.text.ins330_show_test) for [Anonymous Symbol]
+    ins330.o(.text.ins330_handle) refers to ins330.o(.bss.ins330_handle.state) for ins330_handle.state
+    ins330.o(.ARM.exidx.text.ins330_handle) refers to ins330.o(.text.ins330_handle) for [Anonymous Symbol]
     com_component.o(.text.com_get_time) refers to perf_counter.o(.text.get_system_us) for get_system_us
     com_component.o(.ARM.exidx.text.com_get_time) refers to com_component.o(.text.com_get_time) for [Anonymous Symbol]
     com_component.o(.text.com_tx_wait) refers to perf_counter.o(.text.get_system_us) for get_system_us
@@ -4639,41 +4680,6 @@ Section Cross References
     com_component.o(.ARM.exidx.text.com_register_driver) refers to com_component.o(.text.com_register_driver) for [Anonymous Symbol]
     com_component.o(.ARM.exidx.text.com_rx_pack_cplt) refers to com_component.o(.text.com_rx_pack_cplt) for [Anonymous Symbol]
     com_component.o(.ARM.exidx.text.com_tx_cplt) refers to com_component.o(.text.com_tx_cplt) for [Anonymous Symbol]
-    dqueue.o(.text.__dqueue_get) refers to strcmpv7m_pel.o(.text) for strcmp
-    dqueue.o(.ARM.exidx.text.__dqueue_get) refers to dqueue.o(.text.__dqueue_get) for [Anonymous Symbol]
-    sht30.o(.text.ll_iic_tx) refers to i2c.o(.bss.hi2c3) for hi2c3
-    sht30.o(.text.ll_iic_tx) refers to stm32h7xx_hal_i2c.o(.text.HAL_I2C_Master_Seq_Transmit_DMA) for HAL_I2C_Master_Seq_Transmit_DMA
-    sht30.o(.ARM.exidx.text.ll_iic_tx) refers to sht30.o(.text.ll_iic_tx) for [Anonymous Symbol]
-    sht30.o(.text.ll_iic_rx) refers to i2c.o(.bss.hi2c3) for hi2c3
-    sht30.o(.text.ll_iic_rx) refers to stm32h7xx_hal_i2c.o(.text.HAL_I2C_Master_Seq_Receive_DMA) for HAL_I2C_Master_Seq_Receive_DMA
-    sht30.o(.text.ll_iic_rx) refers to stm32h7xx_hal_i2c.o(.text.HAL_I2C_Master_Seq_Receive_IT) for HAL_I2C_Master_Seq_Receive_IT
-    sht30.o(.ARM.exidx.text.ll_iic_rx) refers to sht30.o(.text.ll_iic_rx) for [Anonymous Symbol]
-    sht30.o(.text.sht30_init) refers to sht30.o(.bss.com_i2c1) for com_i2c1
-    sht30.o(.text.sht30_init) refers to com_component_i2c.o(.text.com_i2c_init) for com_i2c_init
-    sht30.o(.text.sht30_init) refers to sht30.o(.text.ll_iic_tx) for ll_iic_tx
-    sht30.o(.text.sht30_init) refers to sht30.o(.text.ll_iic_rx) for ll_iic_rx
-    sht30.o(.ARM.exidx.text.sht30_init) refers to sht30.o(.text.sht30_init) for [Anonymous Symbol]
-    sht30.o(.text.report_tempRH_json) refers to sht30.o(.text.SHT30_SampleData) for SHT30_SampleData
-    sht30.o(.text.report_tempRH_json) refers to sht30.o(.rodata.str1.1) for .L.str
-    sht30.o(.text.report_tempRH_json) refers to elog.o(.text.elog_output) for elog_output
-    sht30.o(.ARM.exidx.text.report_tempRH_json) refers to sht30.o(.text.report_tempRH_json) for [Anonymous Symbol]
-    sht30.o(.text.SHT30_SampleData) refers to sht30.o(.bss.com_i2c1) for com_i2c1
-    sht30.o(.text.SHT30_SampleData) refers to com_component_i2c.o(.text.com_i2c_tx) for com_i2c_tx
-    sht30.o(.text.SHT30_SampleData) refers to sht30.o(.bss.flag_rx) for flag_rx
-    sht30.o(.text.SHT30_SampleData) refers to com_component_i2c.o(.text.com_i2c_start_rx) for com_i2c_start_rx
-    sht30.o(.text.SHT30_SampleData) refers to sht30.o(.rodata.str1.1) for .L__FUNCTION__.SHT30_SampleData
-    sht30.o(.text.SHT30_SampleData) refers to elog.o(.text.elog_output) for elog_output
-    sht30.o(.text.SHT30_SampleData) refers to kfifo.o(.text.spin_lock_irqrestore) for spin_lock_irqrestore
-    sht30.o(.text.SHT30_SampleData) refers to kfifo.o(.text.__kfifo_get) for __kfifo_get
-    sht30.o(.text.SHT30_SampleData) refers to kfifo.o(.text.spin_unlock_irqrestore) for spin_unlock_irqrestore
-    sht30.o(.ARM.exidx.text.SHT30_SampleData) refers to sht30.o(.text.SHT30_SampleData) for [Anonymous Symbol]
-    sht30.o(.text.HAL_I2C_MasterTxCpltCallback) refers to sht30.o(.bss.com_i2c1) for com_i2c1
-    sht30.o(.text.HAL_I2C_MasterTxCpltCallback) refers to com_component_i2c.o(.text.com_i2c_tx_cplt) for com_i2c_tx_cplt
-    sht30.o(.ARM.exidx.text.HAL_I2C_MasterTxCpltCallback) refers to sht30.o(.text.HAL_I2C_MasterTxCpltCallback) for [Anonymous Symbol]
-    sht30.o(.text.HAL_I2C_MasterRxCpltCallback) refers to sht30.o(.bss.com_i2c1) for com_i2c1
-    sht30.o(.text.HAL_I2C_MasterRxCpltCallback) refers to com_component_i2c.o(.text.com_i2c_rx_cplt) for com_i2c_rx_cplt
-    sht30.o(.text.HAL_I2C_MasterRxCpltCallback) refers to sht30.o(.bss.flag_rx) for flag_rx
-    sht30.o(.ARM.exidx.text.HAL_I2C_MasterRxCpltCallback) refers to sht30.o(.text.HAL_I2C_MasterRxCpltCallback) for [Anonymous Symbol]
     com_component_i2c.o(.text.com_i2c_tx) refers to com_component.o(.text.com_queue_put) for com_queue_put
     com_component_i2c.o(.text.com_i2c_tx) refers to com_component_i2c.o(.rodata.str1.1) for .L.str
     com_component_i2c.o(.text.com_i2c_tx) refers to elog.o(.text.elog_output) for elog_output
@@ -4742,34 +4748,28 @@ Section Cross References
     com_component_uart.o(.text.com_uart_rx_pack_cplt) refers to com_component.o(.text.com_queue_put_rx) for com_queue_put_rx
     com_component_uart.o(.ARM.exidx.text.com_uart_rx_pack_cplt) refers to com_component_uart.o(.text.com_uart_rx_pack_cplt) for [Anonymous Symbol]
     com_component_uart.o(.ARM.exidx.text.com_uart_linkrx) refers to com_component_uart.o(.text.com_uart_linkrx) for [Anonymous Symbol]
-    tim_pwm.o(.text.tim_pwm_auto_updata_clock) refers to tim_pwm.o(.data.tim_tab) for tim_tab
-    tim_pwm.o(.ARM.exidx.text.tim_pwm_auto_updata_clock) refers to tim_pwm.o(.text.tim_pwm_auto_updata_clock) for [Anonymous Symbol]
-    tim_pwm.o(.ARM.exidx.text.tim_auto_updata_clock) refers to tim_pwm.o(.text.tim_auto_updata_clock) for [Anonymous Symbol]
-    tim_pwm.o(.ARM.exidx.text.tim_pwm_init) refers to tim_pwm.o(.text.tim_pwm_init) for [Anonymous Symbol]
-    tim_pwm.o(.ARM.exidx.text.tim_pwm_set_duty) refers to tim_pwm.o(.text.tim_pwm_set_duty) for [Anonymous Symbol]
-    tim_pwm.o(.ARM.exidx.text.tim_pwm_get_reload) refers to tim_pwm.o(.text.tim_pwm_get_reload) for [Anonymous Symbol]
-    tim_pwm.o(.ARM.exidx.text.tim_pwm_get_duty) refers to tim_pwm.o(.text.tim_pwm_get_duty) for [Anonymous Symbol]
-    tim_pwm.o(.ARM.exidx.text.tim_pwm_get_cmp) refers to tim_pwm.o(.text.tim_pwm_get_cmp) for [Anonymous Symbol]
-    tim_pwm.o(.ARM.exidx.text.calculate_timer_values) refers to tim_pwm.o(.text.calculate_timer_values) for [Anonymous Symbol]
-    tim_pwm.o(.ARM.exidx.text.tim_pwm_get_psc) refers to tim_pwm.o(.text.tim_pwm_get_psc) for [Anonymous Symbol]
-    tim_pwm.o(.text.tim_pwm_set_freq) refers to tim_pwm.o(.text.calculate_timer_values) for calculate_timer_values
-    tim_pwm.o(.text.tim_pwm_set_freq) refers to tim_pwm.o(.text.tim_pwm_set_duty) for tim_pwm_set_duty
-    tim_pwm.o(.text.tim_pwm_set_freq) refers to tim_pwm.o(.rodata.str1.1) for .L.str
-    tim_pwm.o(.text.tim_pwm_set_freq) refers to elog.o(.text.elog_output) for elog_output
-    tim_pwm.o(.ARM.exidx.text.tim_pwm_set_freq) refers to tim_pwm.o(.text.tim_pwm_set_freq) for [Anonymous Symbol]
-    tim_pwm.o(.text.tim_pwm_get_freq) refers to ffltll_clz.o(x$fpl$ffltll) for __aeabi_l2f
-    tim_pwm.o(.ARM.exidx.text.tim_pwm_get_freq) refers to tim_pwm.o(.text.tim_pwm_get_freq) for [Anonymous Symbol]
-    tim_pwm.o(.text.tim_pwm_start) refers to stm32h7xx_hal_tim.o(.text.HAL_TIM_PWM_Start) for HAL_TIM_PWM_Start
-    tim_pwm.o(.ARM.exidx.text.tim_pwm_start) refers to tim_pwm.o(.text.tim_pwm_start) for [Anonymous Symbol]
-    tim_pwm.o(.text.tim_pwm_stop) refers to stm32h7xx_hal_tim.o(.text.HAL_TIM_PWM_Stop) for HAL_TIM_PWM_Stop
-    tim_pwm.o(.ARM.exidx.text.tim_pwm_stop) refers to tim_pwm.o(.text.tim_pwm_stop) for [Anonymous Symbol]
-    tim_pwm.o(.ARM.exidx.text.tim_updata_clock) refers to tim_pwm.o(.text.tim_updata_clock) for [Anonymous Symbol]
-    tim_pwm.o(.ARM.exidx.text.tim_pwm_get_clock) refers to tim_pwm.o(.text.tim_pwm_get_clock) for [Anonymous Symbol]
-    tim_pwm.o(.data.tim_tab) refers to stm32h7xx_hal_rcc.o(.text.HAL_RCC_GetPCLK1Freq) for HAL_RCC_GetPCLK1Freq
-    ins330.o(.ARM.exidx.text.ins330_init) refers to ins330.o(.text.ins330_init) for [Anonymous Symbol]
-    ins330.o(.ARM.exidx.text.ins330_show_test) refers to ins330.o(.text.ins330_show_test) for [Anonymous Symbol]
-    ins330.o(.text.ins330_handle) refers to ins330.o(.bss.ins330_handle.state) for ins330_handle.state
-    ins330.o(.ARM.exidx.text.ins330_handle) refers to ins330.o(.text.ins330_handle) for [Anonymous Symbol]
+    kfifo.o(.ARM.exidx.text.spin_lock_irqrestore) refers to kfifo.o(.text.spin_lock_irqrestore) for [Anonymous Symbol]
+    kfifo.o(.ARM.exidx.text.spin_unlock_irqrestore) refers to kfifo.o(.text.spin_unlock_irqrestore) for [Anonymous Symbol]
+    kfifo.o(.ARM.exidx.text.is_power_of_2) refers to kfifo.o(.text.is_power_of_2) for [Anonymous Symbol]
+    kfifo.o(.text.kmalloc) refers to h1_alloc.o(.text) for malloc
+    kfifo.o(.ARM.exidx.text.kmalloc) refers to kfifo.o(.text.kmalloc) for [Anonymous Symbol]
+    kfifo.o(.text.kfree) refers to h1_free.o(.text) for free
+    kfifo.o(.ARM.exidx.text.kfree) refers to kfifo.o(.text.kfree) for [Anonymous Symbol]
+    kfifo.o(.text.kfifo_init) refers to h1_alloc.o(.text) for malloc
+    kfifo.o(.ARM.exidx.text.kfifo_init) refers to kfifo.o(.text.kfifo_init) for [Anonymous Symbol]
+    kfifo.o(.ARM.exidx.text.BUG_ON) refers to kfifo.o(.text.BUG_ON) for [Anonymous Symbol]
+    kfifo.o(.text.kfifo_alloc) refers to h1_alloc.o(.text) for malloc
+    kfifo.o(.text.kfifo_alloc) refers to h1_free.o(.text) for free
+    kfifo.o(.ARM.exidx.text.kfifo_alloc) refers to kfifo.o(.text.kfifo_alloc) for [Anonymous Symbol]
+    kfifo.o(.ARM.exidx.text.roundup_pow_of_two) refers to kfifo.o(.text.roundup_pow_of_two) for [Anonymous Symbol]
+    kfifo.o(.text.__kfifo_put) refers to rt_memcpy_v6.o(.text) for __aeabi_memcpy
+    kfifo.o(.ARM.exidx.text.__kfifo_put) refers to kfifo.o(.text.__kfifo_put) for [Anonymous Symbol]
+    kfifo.o(.text.__kfifo_get) refers to rt_memcpy_v6.o(.text) for __aeabi_memcpy
+    kfifo.o(.ARM.exidx.text.__kfifo_get) refers to kfifo.o(.text.__kfifo_get) for [Anonymous Symbol]
+    kfifo.o(.text.__kfifo_put_try) refers to rt_memcpy_v6.o(.text) for __aeabi_memcpy
+    kfifo.o(.ARM.exidx.text.__kfifo_put_try) refers to kfifo.o(.text.__kfifo_put_try) for [Anonymous Symbol]
+    kfifo.o(.text.__kfifo_get_try) refers to rt_memcpy_v6.o(.text) for __aeabi_memcpy
+    kfifo.o(.ARM.exidx.text.__kfifo_get_try) refers to kfifo.o(.text.__kfifo_get_try) for [Anonymous Symbol]
     fdb.o(.text._fdb_init_ex) refers to fdb.o(.rodata.str1.1) for .L.str.2
     fdb.o(.text._fdb_init_ex) refers to elog.o(.text.elog_output) for elog_output
     fdb.o(.text._fdb_init_ex) refers to fal.o(.text.fal_init) for fal_init
@@ -8177,27 +8177,6 @@ Removing Unused input sections from the image.
     Removing common.o(.ARM.exidx.text.fputc), (8 bytes).
     Removing common.o(.text.printf_test), (36 bytes).
     Removing common.o(.ARM.exidx.text.printf_test), (8 bytes).
-    Removing kfifo.o(.text), (0 bytes).
-    Removing kfifo.o(.ARM.exidx.text.spin_lock_irqrestore), (8 bytes).
-    Removing kfifo.o(.ARM.exidx.text.spin_unlock_irqrestore), (8 bytes).
-    Removing kfifo.o(.text.is_power_of_2), (44 bytes).
-    Removing kfifo.o(.ARM.exidx.text.is_power_of_2), (8 bytes).
-    Removing kfifo.o(.text.kmalloc), (4 bytes).
-    Removing kfifo.o(.ARM.exidx.text.kmalloc), (8 bytes).
-    Removing kfifo.o(.text.kfree), (4 bytes).
-    Removing kfifo.o(.ARM.exidx.text.kfree), (8 bytes).
-    Removing kfifo.o(.text.kfifo_init), (72 bytes).
-    Removing kfifo.o(.ARM.exidx.text.kfifo_init), (8 bytes).
-    Removing kfifo.o(.text.BUG_ON), (10 bytes).
-    Removing kfifo.o(.ARM.exidx.text.BUG_ON), (8 bytes).
-    Removing kfifo.o(.ARM.exidx.text.kfifo_alloc), (8 bytes).
-    Removing kfifo.o(.text.roundup_pow_of_two), (40 bytes).
-    Removing kfifo.o(.ARM.exidx.text.roundup_pow_of_two), (8 bytes).
-    Removing kfifo.o(.ARM.exidx.text.__kfifo_put), (8 bytes).
-    Removing kfifo.o(.ARM.exidx.text.__kfifo_get), (8 bytes).
-    Removing kfifo.o(.text.__kfifo_put_try), (64 bytes).
-    Removing kfifo.o(.ARM.exidx.text.__kfifo_put_try), (8 bytes).
-    Removing kfifo.o(.ARM.exidx.text.__kfifo_get_try), (8 bytes).
     Removing com_uart_port.o(.text), (0 bytes).
     Removing com_uart_port.o(.ARM.exidx.text.ll_uart_tx), (8 bytes).
     Removing com_uart_port.o(.ARM.exidx.text.ll_uart_rx), (8 bytes).
@@ -8207,6 +8186,52 @@ Removing Unused input sections from the image.
     Removing com_uart_port.o(.ARM.exidx.text.HAL_UART_TxCpltCallback), (8 bytes).
     Removing com_uart_port.o(.ARM.exidx.text.HAL_UARTEx_RxEventCallback), (8 bytes).
     Removing com_uart_port.o(.ARM.exidx.text.HAL_UART_ErrorCallback), (8 bytes).
+    Removing com_uart_port.o(.bss.com), (240 bytes).
+    Removing dqueue.o(.text), (0 bytes).
+    Removing dqueue.o(.text.__dqueue_get), (52 bytes).
+    Removing dqueue.o(.ARM.exidx.text.__dqueue_get), (8 bytes).
+    Removing sht30.o(.text), (0 bytes).
+    Removing sht30.o(.ARM.exidx.text.ll_iic_tx), (8 bytes).
+    Removing sht30.o(.ARM.exidx.text.ll_iic_rx), (8 bytes).
+    Removing sht30.o(.ARM.exidx.text.sht30_init), (8 bytes).
+    Removing sht30.o(.text.report_tempRH_json), (216 bytes).
+    Removing sht30.o(.ARM.exidx.text.report_tempRH_json), (8 bytes).
+    Removing sht30.o(.text.SHT30_SampleData), (696 bytes).
+    Removing sht30.o(.ARM.exidx.text.SHT30_SampleData), (8 bytes).
+    Removing sht30.o(.ARM.exidx.text.HAL_I2C_MasterTxCpltCallback), (8 bytes).
+    Removing sht30.o(.ARM.exidx.text.HAL_I2C_MasterRxCpltCallback), (8 bytes).
+    Removing sht30.o(.bss.flag_tx), (1 bytes).
+    Removing sht30.o(.rodata.str1.1), (162 bytes).
+    Removing tim_pwm.o(.text), (0 bytes).
+    Removing tim_pwm.o(.text.tim_pwm_auto_updata_clock), (74 bytes).
+    Removing tim_pwm.o(.ARM.exidx.text.tim_pwm_auto_updata_clock), (8 bytes).
+    Removing tim_pwm.o(.text.tim_auto_updata_clock), (4 bytes).
+    Removing tim_pwm.o(.ARM.exidx.text.tim_auto_updata_clock), (8 bytes).
+    Removing tim_pwm.o(.ARM.exidx.text.tim_pwm_init), (8 bytes).
+    Removing tim_pwm.o(.ARM.exidx.text.tim_pwm_set_duty), (8 bytes).
+    Removing tim_pwm.o(.text.tim_pwm_get_reload), (8 bytes).
+    Removing tim_pwm.o(.ARM.exidx.text.tim_pwm_get_reload), (8 bytes).
+    Removing tim_pwm.o(.ARM.exidx.text.tim_pwm_get_duty), (8 bytes).
+    Removing tim_pwm.o(.text.tim_pwm_get_cmp), (80 bytes).
+    Removing tim_pwm.o(.ARM.exidx.text.tim_pwm_get_cmp), (8 bytes).
+    Removing tim_pwm.o(.ARM.exidx.text.calculate_timer_values), (8 bytes).
+    Removing tim_pwm.o(.text.tim_pwm_get_psc), (8 bytes).
+    Removing tim_pwm.o(.ARM.exidx.text.tim_pwm_get_psc), (8 bytes).
+    Removing tim_pwm.o(.ARM.exidx.text.tim_pwm_set_freq), (8 bytes).
+    Removing tim_pwm.o(.ARM.exidx.text.tim_pwm_get_freq), (8 bytes).
+    Removing tim_pwm.o(.text.tim_pwm_start), (10 bytes).
+    Removing tim_pwm.o(.ARM.exidx.text.tim_pwm_start), (8 bytes).
+    Removing tim_pwm.o(.text.tim_pwm_stop), (10 bytes).
+    Removing tim_pwm.o(.ARM.exidx.text.tim_pwm_stop), (8 bytes).
+    Removing tim_pwm.o(.text.tim_updata_clock), (2 bytes).
+    Removing tim_pwm.o(.ARM.exidx.text.tim_updata_clock), (8 bytes).
+    Removing tim_pwm.o(.text.tim_pwm_get_clock), (4 bytes).
+    Removing tim_pwm.o(.ARM.exidx.text.tim_pwm_get_clock), (8 bytes).
+    Removing tim_pwm.o(.data.tim_tab), (40 bytes).
+    Removing ins330.o(.text), (0 bytes).
+    Removing ins330.o(.ARM.exidx.text.ins330_init), (8 bytes).
+    Removing ins330.o(.ARM.exidx.text.ins330_show_test), (8 bytes).
+    Removing ins330.o(.ARM.exidx.text.ins330_handle), (8 bytes).
     Removing com_component.o(.text), (0 bytes).
     Removing com_component.o(.text.com_get_time), (4 bytes).
     Removing com_component.o(.ARM.exidx.text.com_get_time), (8 bytes).
@@ -8242,21 +8267,6 @@ Removing Unused input sections from the image.
     Removing com_component.o(.ARM.exidx.text.com_rx_pack_cplt), (8 bytes).
     Removing com_component.o(.text.com_tx_cplt), (4 bytes).
     Removing com_component.o(.ARM.exidx.text.com_tx_cplt), (8 bytes).
-    Removing dqueue.o(.text), (0 bytes).
-    Removing dqueue.o(.text.__dqueue_get), (52 bytes).
-    Removing dqueue.o(.ARM.exidx.text.__dqueue_get), (8 bytes).
-    Removing sht30.o(.text), (0 bytes).
-    Removing sht30.o(.ARM.exidx.text.ll_iic_tx), (8 bytes).
-    Removing sht30.o(.ARM.exidx.text.ll_iic_rx), (8 bytes).
-    Removing sht30.o(.ARM.exidx.text.sht30_init), (8 bytes).
-    Removing sht30.o(.text.report_tempRH_json), (216 bytes).
-    Removing sht30.o(.ARM.exidx.text.report_tempRH_json), (8 bytes).
-    Removing sht30.o(.text.SHT30_SampleData), (696 bytes).
-    Removing sht30.o(.ARM.exidx.text.SHT30_SampleData), (8 bytes).
-    Removing sht30.o(.ARM.exidx.text.HAL_I2C_MasterTxCpltCallback), (8 bytes).
-    Removing sht30.o(.ARM.exidx.text.HAL_I2C_MasterRxCpltCallback), (8 bytes).
-    Removing sht30.o(.bss.flag_tx), (1 bytes).
-    Removing sht30.o(.rodata.str1.1), (162 bytes).
     Removing com_component_i2c.o(.text), (0 bytes).
     Removing com_component_i2c.o(.ARM.exidx.text.com_i2c_tx), (8 bytes).
     Removing com_component_i2c.o(.text.com_i2c_try_communite), (74 bytes).
@@ -8292,37 +8302,27 @@ Removing Unused input sections from the image.
     Removing com_component_uart.o(.ARM.exidx.text.com_uart_rx_pack_cplt), (8 bytes).
     Removing com_component_uart.o(.text.com_uart_linkrx), (4 bytes).
     Removing com_component_uart.o(.ARM.exidx.text.com_uart_linkrx), (8 bytes).
-    Removing tim_pwm.o(.text), (0 bytes).
-    Removing tim_pwm.o(.text.tim_pwm_auto_updata_clock), (74 bytes).
-    Removing tim_pwm.o(.ARM.exidx.text.tim_pwm_auto_updata_clock), (8 bytes).
-    Removing tim_pwm.o(.text.tim_auto_updata_clock), (4 bytes).
-    Removing tim_pwm.o(.ARM.exidx.text.tim_auto_updata_clock), (8 bytes).
-    Removing tim_pwm.o(.ARM.exidx.text.tim_pwm_init), (8 bytes).
-    Removing tim_pwm.o(.ARM.exidx.text.tim_pwm_set_duty), (8 bytes).
-    Removing tim_pwm.o(.text.tim_pwm_get_reload), (8 bytes).
-    Removing tim_pwm.o(.ARM.exidx.text.tim_pwm_get_reload), (8 bytes).
-    Removing tim_pwm.o(.ARM.exidx.text.tim_pwm_get_duty), (8 bytes).
-    Removing tim_pwm.o(.text.tim_pwm_get_cmp), (80 bytes).
-    Removing tim_pwm.o(.ARM.exidx.text.tim_pwm_get_cmp), (8 bytes).
-    Removing tim_pwm.o(.ARM.exidx.text.calculate_timer_values), (8 bytes).
-    Removing tim_pwm.o(.text.tim_pwm_get_psc), (8 bytes).
-    Removing tim_pwm.o(.ARM.exidx.text.tim_pwm_get_psc), (8 bytes).
-    Removing tim_pwm.o(.ARM.exidx.text.tim_pwm_set_freq), (8 bytes).
-    Removing tim_pwm.o(.ARM.exidx.text.tim_pwm_get_freq), (8 bytes).
-    Removing tim_pwm.o(.text.tim_pwm_start), (10 bytes).
-    Removing tim_pwm.o(.ARM.exidx.text.tim_pwm_start), (8 bytes).
-    Removing tim_pwm.o(.text.tim_pwm_stop), (10 bytes).
-    Removing tim_pwm.o(.ARM.exidx.text.tim_pwm_stop), (8 bytes).
-    Removing tim_pwm.o(.text.tim_updata_clock), (2 bytes).
-    Removing tim_pwm.o(.ARM.exidx.text.tim_updata_clock), (8 bytes).
-    Removing tim_pwm.o(.text.tim_pwm_get_clock), (4 bytes).
-    Removing tim_pwm.o(.ARM.exidx.text.tim_pwm_get_clock), (8 bytes).
-    Removing tim_pwm.o(.data.tim_tab), (40 bytes).
-    Removing ins330.o(.text), (0 bytes).
-    Removing ins330.o(.ARM.exidx.text.ins330_init), (8 bytes).
-    Removing ins330.o(.ARM.exidx.text.ins330_show_test), (8 bytes).
-    Removing ins330.o(.ARM.exidx.text.ins330_handle), (8 bytes).
-    Removing com_spi_port.o(.text), (0 bytes).
+    Removing kfifo.o(.text), (0 bytes).
+    Removing kfifo.o(.ARM.exidx.text.spin_lock_irqrestore), (8 bytes).
+    Removing kfifo.o(.ARM.exidx.text.spin_unlock_irqrestore), (8 bytes).
+    Removing kfifo.o(.text.is_power_of_2), (44 bytes).
+    Removing kfifo.o(.ARM.exidx.text.is_power_of_2), (8 bytes).
+    Removing kfifo.o(.text.kmalloc), (4 bytes).
+    Removing kfifo.o(.ARM.exidx.text.kmalloc), (8 bytes).
+    Removing kfifo.o(.text.kfree), (4 bytes).
+    Removing kfifo.o(.ARM.exidx.text.kfree), (8 bytes).
+    Removing kfifo.o(.text.kfifo_init), (72 bytes).
+    Removing kfifo.o(.ARM.exidx.text.kfifo_init), (8 bytes).
+    Removing kfifo.o(.text.BUG_ON), (10 bytes).
+    Removing kfifo.o(.ARM.exidx.text.BUG_ON), (8 bytes).
+    Removing kfifo.o(.ARM.exidx.text.kfifo_alloc), (8 bytes).
+    Removing kfifo.o(.text.roundup_pow_of_two), (40 bytes).
+    Removing kfifo.o(.ARM.exidx.text.roundup_pow_of_two), (8 bytes).
+    Removing kfifo.o(.ARM.exidx.text.__kfifo_put), (8 bytes).
+    Removing kfifo.o(.ARM.exidx.text.__kfifo_get), (8 bytes).
+    Removing kfifo.o(.text.__kfifo_put_try), (64 bytes).
+    Removing kfifo.o(.ARM.exidx.text.__kfifo_put_try), (8 bytes).
+    Removing kfifo.o(.ARM.exidx.text.__kfifo_get_try), (8 bytes).
     Removing fdb.o(.text), (0 bytes).
     Removing fdb.o(.text._fdb_init_ex), (660 bytes).
     Removing fdb.o(.ARM.exidx.text._fdb_init_ex), (8 bytes).
@@ -8584,7 +8584,7 @@ Removing Unused input sections from the image.
     Removing perf_counter.o(.bss.s_nMSResidule), (4 bytes).
     Removing test.o(.text), (0 bytes).
 
-2674 unused section(s) (total 146361 bytes) removed from the image.
+2674 unused section(s) (total 146601 bytes) removed from the image.
 
 ==============================================================================
 
@@ -8835,7 +8835,6 @@ Image Symbol Table
     com_component_i2c.c                      0x00000000   Number         0  com_component_i2c.o ABSOLUTE
     com_component_spi.c                      0x00000000   Number         0  com_component_spi.o ABSOLUTE
     com_component_uart.c                     0x00000000   Number         0  com_component_uart.o ABSOLUTE
-    com_spi_port.c                           0x00000000   Number         0  com_spi_port.o ABSOLUTE
     com_uart_port.c                          0x00000000   Number         0  com_uart_port.o ABSOLUTE
     commend.c                                0x00000000   Number         0  commend.o ABSOLUTE
     common.c                                 0x00000000   Number         0  common.o ABSOLUTE
@@ -9790,109 +9789,109 @@ Image Symbol Table
     .L.str.1                                 0x0801a1d9   Data          42  sfud_port.o(.rodata.str1.1)
     .L__FUNCTION__.spi_write_read            0x0801a203   Data          15  sfud_port.o(.rodata.str1.1)
     .L.str                                   0x0801a212   Data           5  sfud_port.o(.rodata.str1.1)
-    .L.str                                   0x0801a217   Data           7  com_component.o(.rodata.str1.1)
-    .L.str                                   0x0801a217   Data           7  com_component.o(.rodata.str1.1)
-    .L.str                                   0x0801a217   Data           7  com_component.o(.rodata.str1.1)
-    .L.str.2                                 0x0801a217   Data           7  com_component.o(.rodata.str1.1)
-    [Anonymous Symbol]                       0x0801a217   Section        0  com_component.o(.rodata.str1.1)
-    .L.str.3                                 0x0801a21e   Data          36  com_component.o(.rodata.str1.1)
-    .Lstr.10                                 0x0801a242   Data          23  com_component.o(.rodata.str1.1)
-    .Lstr.9                                  0x0801a259   Data          20  com_component.o(.rodata.str1.1)
-    .L__FUNCTION__.com_init                  0x0801a26d   Data           9  com_component.o(.rodata.str1.1)
-    .L.str.1                                 0x0801a276   Data          40  com_component_i2c.o(.rodata.str1.1)
-    [Anonymous Symbol]                       0x0801a276   Section        0  com_component_i2c.o(.rodata.str1.1)
-    .L__FUNCTION__.com_i2c_start_rx          0x0801a29e   Data          17  com_component_i2c.o(.rodata.str1.1)
-    .L__FUNCTION__.com_i2c_tx                0x0801a2af   Data          11  com_component_i2c.o(.rodata.str1.1)
-    .L.str.2                                 0x0801a2ba   Data          43  com_component_spi.o(.rodata.str1.1)
-    [Anonymous Symbol]                       0x0801a2ba   Section        0  com_component_spi.o(.rodata.str1.1)
-    .L.str.3                                 0x0801a2e5   Data          18  com_component_spi.o(.rodata.str1.1)
-    .L__FUNCTION__.com_spi_tx_rx             0x0801a2e9   Data          14  com_component_spi.o(.rodata.str1.1)
-    .L.str.1                                 0x0801a2f7   Data          40  com_component_spi.o(.rodata.str1.1)
-    .L__FUNCTION__.com_spi_start_rx          0x0801a31f   Data          17  com_component_spi.o(.rodata.str1.1)
-    .L__FUNCTION__.com_spi_tx                0x0801a330   Data          11  com_component_spi.o(.rodata.str1.1)
-    .L.str.1                                 0x0801a33b   Data          30  tim_pwm.o(.rodata.str1.1)
-    [Anonymous Symbol]                       0x0801a33b   Section        0  tim_pwm.o(.rodata.str1.1)
-    .L__FUNCTION__.tim_pwm_set_freq          0x0801a359   Data          17  tim_pwm.o(.rodata.str1.1)
-    .L.str.15                                0x0801a36a   Data          25  fal.o(.rodata.str1.1)
-    .L.str.4                                 0x0801a36a   Data          25  fal.o(.rodata.str1.1)
-    [Anonymous Symbol]                       0x0801a36a   Section        0  fal.o(.rodata.str1.1)
-    .L.str.2                                 0x0801a383   Data           7  fal.o(.rodata.str1.1)
-    .L.str                                   0x0801a38a   Data          31  fal_flash.o(.rodata.str1.1)
-    .L.str                                   0x0801a38a   Data          31  fal_flash.o(.rodata.str1.1)
-    [Anonymous Symbol]                       0x0801a38a   Section        0  fal_flash.o(.rodata.str1.1)
-    .L.str.5                                 0x0801a3a9   Data          92  fal_flash.o(.rodata.str1.1)
-    .L__func__.fal_flash_device_find         0x0801a405   Data          22  fal_flash.o(.rodata.str1.1)
-    .L__func__.fal_flash_init                0x0801a41b   Data          15  fal_flash.o(.rodata.str1.1)
-    .L.str.4                                 0x0801a42a   Data           6  fal_partition.o(.rodata.str1.1)
-    [Anonymous Symbol]                       0x0801a42a   Section        0  fal_partition.o(.rodata.str1.1)
-    .L.str.2                                 0x0801a430   Data          17  fal_partition.o(.rodata.str1.1)
-    .L.str.10                                0x0801a43f   Data           2  fal_partition.o(.rodata.str1.1)
-    .L.str.28                                0x0801a441   Data          78  fal_partition.o(.rodata.str1.1)
-    .L.str.3                                 0x0801a48f   Data          62  fal_partition.o(.rodata.str1.1)
-    .L.str.8                                 0x0801a4cd   Data          62  fal_partition.o(.rodata.str1.1)
-    .L.str.9                                 0x0801a4e4   Data          31  fal_partition.o(.rodata.str1.1)
-    .L.str.10                                0x0801a503   Data           8  fal_partition.o(.rodata.str1.1)
-    .L__func__.check_and_update_part_cache   0x0801a50b   Data          28  fal_partition.o(.rodata.str1.1)
-    .L__func__.fal_get_partition_table       0x0801a50b   Data          24  fal_partition.o(.rodata.str1.1)
-    .L__func__.fal_set_partition_table_temp  0x0801a523   Data          29  fal_partition.o(.rodata.str1.1)
-    .L.str.7                                 0x0801a527   Data          39  fal_partition.o(.rodata.str1.1)
-    .L.str.13                                0x0801a540   Data           5  fal_partition.o(.rodata.str1.1)
-    .L__func__.fal_partition_read            0x0801a545   Data          19  fal_partition.o(.rodata.str1.1)
-    .L.str                                   0x0801a54d   Data           1  fal_partition.o(.rodata.str1.1)
-    .L__func__.read_spiflash                 0x0801a54e   Data          14  fal_flash_sfud_port.o(.rodata.str1.1)
-    [Anonymous Symbol]                       0x0801a54e   Section        0  fal_flash_sfud_port.o(.rodata.str1.1)
-    .L.str.14                                0x0801a558   Data           4  fal_partition.o(.rodata.str1.1)
-    .L__func__.erase_spiflash                0x0801a55c   Data          15  fal_flash_sfud_port.o(.rodata.str1.1)
-    .L__func__.write_spiflash                0x0801a56b   Data          15  fal_flash_sfud_port.o(.rodata.str1.1)
-    .L.str.2                                 0x0801a574   Data           6  fal_flash_sfud_port.o(.rodata.str1.1)
-    .L.str.7                                 0x0801a574   Data           6  fal_flash_sfud_port.o(.rodata.str1.1)
-    .L.str.17                                0x0801a575   Data          73  fal_partition.o(.rodata.str1.1)
-    .L.str.2                                 0x0801a57a   Data          18  fal_flash_sfud_port.o(.rodata.str1.1)
-    .L.str.1                                 0x0801a58c   Data           9  fal_flash_sfud_port.o(.rodata.str1.1)
-    .L__func__.fal_partition_write           0x0801a5be   Data          20  fal_partition.o(.rodata.str1.1)
-    .L.str.20                                0x0801a5d2   Data          75  fal_partition.o(.rodata.str1.1)
-    c$$dinf                                  0x0801a5dc   Section        8  fpconst.o(c$$dinf)
-    c$$dmax                                  0x0801a5e4   Section        8  fpconst.o(c$$dmax)
-    locale$$data                             0x0801a5ec   Section      272  lc_ctype_c.o(locale$$data)
-    __lcctype_c_name                         0x0801a5f0   Data           2  lc_ctype_c.o(locale$$data)
-    __lcctype_c_start                        0x0801a5f8   Data           0  lc_ctype_c.o(locale$$data)
-    .L__func__.fal_partition_erase           0x0801a61d   Data          20  fal_partition.o(.rodata.str1.1)
-    .L.str.23                                0x0801a631   Data          74  fal_partition.o(.rodata.str1.1)
-    .L.str.29                                0x0801a6e5   Data          24  fal_partition.o(.rodata.str1.1)
-    __lcctype_c_end                          0x0801a6fc   Data           0  lc_ctype_c.o(locale$$data)
-    locale$$data                             0x0801a6fc   Section       28  lc_numeric_c.o(locale$$data)
-    .L__func__.flash_device_find_by_part     0x0801a6fd   Data          26  fal_partition.o(.rodata.str1.1)
-    __lcnum_c_name                           0x0801a700   Data           2  lc_numeric_c.o(locale$$data)
-    __lcnum_c_start                          0x0801a708   Data           0  lc_numeric_c.o(locale$$data)
-    __lcnum_c_point                          0x0801a714   Data           0  lc_numeric_c.o(locale$$data)
-    __lcnum_c_thousands                      0x0801a716   Data           0  lc_numeric_c.o(locale$$data)
-    .L.str.30                                0x0801a717   Data          50  fal_partition.o(.rodata.str1.1)
-    __lcnum_c_grouping                       0x0801a717   Data           0  lc_numeric_c.o(locale$$data)
-    __lcnum_c_end                            0x0801a718   Data           0  lc_numeric_c.o(locale$$data)
-    __tagsym$$used.0                         0x0801a718   Number         0  commend.o(shellCommand)
-    __tagsym$$used.1                         0x0801a728   Number         0  commend.o(shellCommand)
-    __tagsym$$used.2                         0x0801a738   Number         0  commend.o(shellCommand)
-    __tagsym$$used.3                         0x0801a748   Number         0  commend.o(shellCommand)
-    __tagsym$$used.4                         0x0801a758   Number         0  commend.o(shellCommand)
-    __tagsym$$used.0                         0x0801a768   Number         0  shell.o(shellCommand)
-    __tagsym$$used.1                         0x0801a778   Number         0  shell.o(shellCommand)
-    __tagsym$$used.2                         0x0801a788   Number         0  shell.o(shellCommand)
-    __tagsym$$used.3                         0x0801a798   Number         0  shell.o(shellCommand)
-    __tagsym$$used.4                         0x0801a7a8   Number         0  shell.o(shellCommand)
-    __tagsym$$used.5                         0x0801a7b8   Number         0  shell.o(shellCommand)
-    __tagsym$$used.6                         0x0801a7c8   Number         0  shell.o(shellCommand)
-    __tagsym$$used.7                         0x0801a7d8   Number         0  shell.o(shellCommand)
-    __tagsym$$used.8                         0x0801a7e8   Number         0  shell.o(shellCommand)
-    __tagsym$$used.9                         0x0801a7f8   Number         0  shell.o(shellCommand)
-    __tagsym$$used.10                        0x0801a808   Number         0  shell.o(shellCommand)
-    __tagsym$$used.11                        0x0801a818   Number         0  shell.o(shellCommand)
-    __tagsym$$used.12                        0x0801a828   Number         0  shell.o(shellCommand)
-    __tagsym$$used.13                        0x0801a838   Number         0  shell.o(shellCommand)
-    __tagsym$$used.14                        0x0801a848   Number         0  shell.o(shellCommand)
-    __tagsym$$used.15                        0x0801a858   Number         0  shell.o(shellCommand)
-    __tagsym$$used.16                        0x0801a868   Number         0  shell.o(shellCommand)
-    __tagsym$$used.17                        0x0801a878   Number         0  shell.o(shellCommand)
-    .init_array                              0x0801a88c   Section        0  init_aeabi.o(.init_array)
+    .L.str                                   0x0801a217   Data           7  tim_pwm.o(.rodata.str1.1)
+    .L.str                                   0x0801a217   Data           7  tim_pwm.o(.rodata.str1.1)
+    .L.str                                   0x0801a217   Data           7  tim_pwm.o(.rodata.str1.1)
+    .L.str.2                                 0x0801a217   Data           7  tim_pwm.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x0801a217   Section        0  tim_pwm.o(.rodata.str1.1)
+    .L.str.1                                 0x0801a21e   Data          30  tim_pwm.o(.rodata.str1.1)
+    .L__FUNCTION__.tim_pwm_set_freq          0x0801a23c   Data          17  tim_pwm.o(.rodata.str1.1)
+    .L.str.3                                 0x0801a24d   Data          33  com_component.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x0801a24d   Section        0  com_component.o(.rodata.str1.1)
+    .Lstr.10                                 0x0801a26e   Data          23  com_component.o(.rodata.str1.1)
+    .Lstr.9                                  0x0801a285   Data          20  com_component.o(.rodata.str1.1)
+    .L__FUNCTION__.com_init                  0x0801a299   Data           9  com_component.o(.rodata.str1.1)
+    .L.str.1                                 0x0801a2a2   Data          37  com_component_i2c.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x0801a2a2   Section        0  com_component_i2c.o(.rodata.str1.1)
+    .L__FUNCTION__.com_i2c_start_rx          0x0801a2c7   Data          17  com_component_i2c.o(.rodata.str1.1)
+    .L__FUNCTION__.com_i2c_tx                0x0801a2d8   Data          11  com_component_i2c.o(.rodata.str1.1)
+    .L.str.2                                 0x0801a2e3   Data          43  com_component_spi.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x0801a2e3   Section        0  com_component_spi.o(.rodata.str1.1)
+    .L.str.3                                 0x0801a30e   Data          18  com_component_spi.o(.rodata.str1.1)
+    .L__FUNCTION__.com_spi_tx_rx             0x0801a30f   Data          14  com_component_spi.o(.rodata.str1.1)
+    .L.str.1                                 0x0801a320   Data          37  com_component_spi.o(.rodata.str1.1)
+    .L__FUNCTION__.com_spi_start_rx          0x0801a345   Data          17  com_component_spi.o(.rodata.str1.1)
+    .L__FUNCTION__.com_spi_tx                0x0801a356   Data          11  com_component_spi.o(.rodata.str1.1)
+    .L.str.15                                0x0801a361   Data          25  fal.o(.rodata.str1.1)
+    .L.str.4                                 0x0801a361   Data          25  fal.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x0801a361   Section        0  fal.o(.rodata.str1.1)
+    .L.str.2                                 0x0801a37a   Data           7  fal.o(.rodata.str1.1)
+    .L.str                                   0x0801a381   Data          31  fal_flash.o(.rodata.str1.1)
+    .L.str                                   0x0801a381   Data          31  fal_flash.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x0801a381   Section        0  fal_flash.o(.rodata.str1.1)
+    .L.str.5                                 0x0801a3a0   Data          92  fal_flash.o(.rodata.str1.1)
+    .L__func__.fal_flash_device_find         0x0801a3fc   Data          22  fal_flash.o(.rodata.str1.1)
+    .L__func__.fal_flash_init                0x0801a412   Data          15  fal_flash.o(.rodata.str1.1)
+    .L.str.4                                 0x0801a421   Data           6  fal_partition.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x0801a421   Section        0  fal_partition.o(.rodata.str1.1)
+    .L.str.2                                 0x0801a427   Data          17  fal_partition.o(.rodata.str1.1)
+    .L.str.10                                0x0801a436   Data           2  fal_partition.o(.rodata.str1.1)
+    .L.str.28                                0x0801a438   Data          78  fal_partition.o(.rodata.str1.1)
+    .L.str.3                                 0x0801a486   Data          62  fal_partition.o(.rodata.str1.1)
+    .L.str.8                                 0x0801a4c4   Data          62  fal_partition.o(.rodata.str1.1)
+    .L.str.9                                 0x0801a4db   Data          31  fal_partition.o(.rodata.str1.1)
+    .L.str.10                                0x0801a4fa   Data           8  fal_partition.o(.rodata.str1.1)
+    .L__func__.check_and_update_part_cache   0x0801a502   Data          28  fal_partition.o(.rodata.str1.1)
+    .L__func__.fal_get_partition_table       0x0801a502   Data          24  fal_partition.o(.rodata.str1.1)
+    .L__func__.fal_set_partition_table_temp  0x0801a51a   Data          29  fal_partition.o(.rodata.str1.1)
+    .L.str.7                                 0x0801a51e   Data          39  fal_partition.o(.rodata.str1.1)
+    .L.str.13                                0x0801a537   Data           5  fal_partition.o(.rodata.str1.1)
+    .L__func__.fal_partition_read            0x0801a53c   Data          19  fal_partition.o(.rodata.str1.1)
+    .L.str                                   0x0801a544   Data           1  fal_partition.o(.rodata.str1.1)
+    .L__func__.read_spiflash                 0x0801a545   Data          14  fal_flash_sfud_port.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x0801a545   Section        0  fal_flash_sfud_port.o(.rodata.str1.1)
+    .L.str.14                                0x0801a54f   Data           4  fal_partition.o(.rodata.str1.1)
+    .L__func__.erase_spiflash                0x0801a553   Data          15  fal_flash_sfud_port.o(.rodata.str1.1)
+    .L__func__.write_spiflash                0x0801a562   Data          15  fal_flash_sfud_port.o(.rodata.str1.1)
+    .L.str.2                                 0x0801a56b   Data           6  fal_flash_sfud_port.o(.rodata.str1.1)
+    .L.str.7                                 0x0801a56b   Data           6  fal_flash_sfud_port.o(.rodata.str1.1)
+    .L.str.17                                0x0801a56c   Data          73  fal_partition.o(.rodata.str1.1)
+    .L.str.2                                 0x0801a571   Data          18  fal_flash_sfud_port.o(.rodata.str1.1)
+    .L.str.1                                 0x0801a583   Data           9  fal_flash_sfud_port.o(.rodata.str1.1)
+    .L__func__.fal_partition_write           0x0801a5b5   Data          20  fal_partition.o(.rodata.str1.1)
+    .L.str.20                                0x0801a5c9   Data          75  fal_partition.o(.rodata.str1.1)
+    c$$dinf                                  0x0801a5d0   Section        8  fpconst.o(c$$dinf)
+    c$$dmax                                  0x0801a5d8   Section        8  fpconst.o(c$$dmax)
+    locale$$data                             0x0801a5e0   Section      272  lc_ctype_c.o(locale$$data)
+    __lcctype_c_name                         0x0801a5e4   Data           2  lc_ctype_c.o(locale$$data)
+    __lcctype_c_start                        0x0801a5ec   Data           0  lc_ctype_c.o(locale$$data)
+    .L__func__.fal_partition_erase           0x0801a614   Data          20  fal_partition.o(.rodata.str1.1)
+    .L.str.23                                0x0801a628   Data          74  fal_partition.o(.rodata.str1.1)
+    .L.str.29                                0x0801a6dc   Data          24  fal_partition.o(.rodata.str1.1)
+    __lcctype_c_end                          0x0801a6f0   Data           0  lc_ctype_c.o(locale$$data)
+    locale$$data                             0x0801a6f0   Section       28  lc_numeric_c.o(locale$$data)
+    .L__func__.flash_device_find_by_part     0x0801a6f4   Data          26  fal_partition.o(.rodata.str1.1)
+    __lcnum_c_name                           0x0801a6f4   Data           2  lc_numeric_c.o(locale$$data)
+    __lcnum_c_start                          0x0801a6fc   Data           0  lc_numeric_c.o(locale$$data)
+    __lcnum_c_point                          0x0801a708   Data           0  lc_numeric_c.o(locale$$data)
+    __lcnum_c_thousands                      0x0801a70a   Data           0  lc_numeric_c.o(locale$$data)
+    __lcnum_c_grouping                       0x0801a70b   Data           0  lc_numeric_c.o(locale$$data)
+    __lcnum_c_end                            0x0801a70c   Data           0  lc_numeric_c.o(locale$$data)
+    __tagsym$$used.0                         0x0801a70c   Number         0  commend.o(shellCommand)
+    .L.str.30                                0x0801a70e   Data          50  fal_partition.o(.rodata.str1.1)
+    __tagsym$$used.1                         0x0801a71c   Number         0  commend.o(shellCommand)
+    __tagsym$$used.2                         0x0801a72c   Number         0  commend.o(shellCommand)
+    __tagsym$$used.3                         0x0801a73c   Number         0  commend.o(shellCommand)
+    __tagsym$$used.4                         0x0801a74c   Number         0  commend.o(shellCommand)
+    __tagsym$$used.0                         0x0801a75c   Number         0  shell.o(shellCommand)
+    __tagsym$$used.1                         0x0801a76c   Number         0  shell.o(shellCommand)
+    __tagsym$$used.2                         0x0801a77c   Number         0  shell.o(shellCommand)
+    __tagsym$$used.3                         0x0801a78c   Number         0  shell.o(shellCommand)
+    __tagsym$$used.4                         0x0801a79c   Number         0  shell.o(shellCommand)
+    __tagsym$$used.5                         0x0801a7ac   Number         0  shell.o(shellCommand)
+    __tagsym$$used.6                         0x0801a7bc   Number         0  shell.o(shellCommand)
+    __tagsym$$used.7                         0x0801a7cc   Number         0  shell.o(shellCommand)
+    __tagsym$$used.8                         0x0801a7dc   Number         0  shell.o(shellCommand)
+    __tagsym$$used.9                         0x0801a7ec   Number         0  shell.o(shellCommand)
+    __tagsym$$used.10                        0x0801a7fc   Number         0  shell.o(shellCommand)
+    __tagsym$$used.11                        0x0801a80c   Number         0  shell.o(shellCommand)
+    __tagsym$$used.12                        0x0801a81c   Number         0  shell.o(shellCommand)
+    __tagsym$$used.13                        0x0801a82c   Number         0  shell.o(shellCommand)
+    __tagsym$$used.14                        0x0801a83c   Number         0  shell.o(shellCommand)
+    __tagsym$$used.15                        0x0801a84c   Number         0  shell.o(shellCommand)
+    __tagsym$$used.16                        0x0801a85c   Number         0  shell.o(shellCommand)
+    __tagsym$$used.17                        0x0801a86c   Number         0  shell.o(shellCommand)
+    .init_array                              0x0801a880   Section        0  init_aeabi.o(.init_array)
     flash_table                              0x2400001c   Data         128  sfud.o(.data.flash_table)
     [Anonymous Symbol]                       0x2400001c   Section        0  sfud.o(.data.flash_table)
     s_nMSUnit                                0x2400009c   Data           4  perf_counter.o(.data.s_nMSUnit)
@@ -10862,43 +10861,43 @@ Image Symbol Table
     shellDescvar                             0x08019234   Data          23  commend.o(.rodata.shellDescvar)
     shellDescvars                            0x0801924b   Data          13  shell.o(.rodata.shellDescvars)
     shellPasswordDefaultUser                 0x08019258   Data           1  shell.o(.rodata.shellPasswordDefaultUser)
-    testTask_attributes                      0x0801a598   Data          36  freertos.o(.rodata.testTask_attributes)
-    Region$$Table$$Base                      0x0801a5bc   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x0801a5dc   Number         0  anon$$obj.o(Region$$Table)
-    __aeabi_HUGE_VAL                         0x0801a5dc   Data           0  fpconst.o(c$$dinf)
-    __aeabi_HUGE_VALL                        0x0801a5dc   Data           0  fpconst.o(c$$dinf)
-    __aeabi_INFINITY                         0x0801a5dc   Data           0  fpconst.o(c$$dinf)
-    __dInf                                   0x0801a5dc   Data           0  fpconst.o(c$$dinf)
-    __huge_val                               0x0801a5dc   Data           0  fpconst.o(c$$dinf)
-    __dbl_max                                0x0801a5e4   Data           0  fpconst.o(c$$dmax)
-    __ctype                                  0x0801a5f9   Data           0  lc_ctype_c.o(locale$$data)
-    shellCommand$$Base                       0x0801a718   Number         0  commend.o(shellCommand)
-    shellCommandsfud                         0x0801a718   Data          16  commend.o(shellCommand)
-    shellCommandreboot                       0x0801a728   Data          16  commend.o(shellCommand)
-    shellCommandtime                         0x0801a738   Data          16  commend.o(shellCommand)
-    shellCommandpwm                          0x0801a748   Data          16  commend.o(shellCommand)
-    shellCommandvar                          0x0801a758   Data          16  commend.o(shellCommand)
-    shellUserDefault                         0x0801a768   Data          16  shell.o(shellCommand)
-    shellCommandsetVar                       0x0801a778   Data          16  shell.o(shellCommand)
-    shellKey0x1B5B4100                       0x0801a788   Data          16  shell.o(shellCommand)
-    shellKey0x1B5B4200                       0x0801a798   Data          16  shell.o(shellCommand)
-    shellKey0x1B5B4300                       0x0801a7a8   Data          16  shell.o(shellCommand)
-    shellKey0x1B5B4400                       0x0801a7b8   Data          16  shell.o(shellCommand)
-    shellKey0x09000000                       0x0801a7c8   Data          16  shell.o(shellCommand)
-    shellKey0x08000000                       0x0801a7d8   Data          16  shell.o(shellCommand)
-    shellKey0x7F000000                       0x0801a7e8   Data          16  shell.o(shellCommand)
-    shellKey0x1B5B337E                       0x0801a7f8   Data          16  shell.o(shellCommand)
-    shellKey0x0A000000                       0x0801a808   Data          16  shell.o(shellCommand)
-    shellKey0x0D000000                       0x0801a818   Data          16  shell.o(shellCommand)
-    shellCommandhelp                         0x0801a828   Data          16  shell.o(shellCommand)
-    shellCommandusers                        0x0801a838   Data          16  shell.o(shellCommand)
-    shellCommandcmds                         0x0801a848   Data          16  shell.o(shellCommand)
-    shellCommandvars                         0x0801a858   Data          16  shell.o(shellCommand)
-    shellCommandkeys                         0x0801a868   Data          16  shell.o(shellCommand)
-    shellCommandclear                        0x0801a878   Data          16  shell.o(shellCommand)
-    SHT$$INIT_ARRAY$$Base                    0x0801a888   Number         0  perf_counter.o(.init_array)
-    shellCommand$$Limit                      0x0801a888   Number         0  shell.o(shellCommand)
-    SHT$$INIT_ARRAY$$Limit                   0x0801a88c   Number         0  init_aeabi.o(.init_array)
+    testTask_attributes                      0x0801a58c   Data          36  freertos.o(.rodata.testTask_attributes)
+    Region$$Table$$Base                      0x0801a5b0   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x0801a5d0   Number         0  anon$$obj.o(Region$$Table)
+    __aeabi_HUGE_VAL                         0x0801a5d0   Data           0  fpconst.o(c$$dinf)
+    __aeabi_HUGE_VALL                        0x0801a5d0   Data           0  fpconst.o(c$$dinf)
+    __aeabi_INFINITY                         0x0801a5d0   Data           0  fpconst.o(c$$dinf)
+    __dInf                                   0x0801a5d0   Data           0  fpconst.o(c$$dinf)
+    __huge_val                               0x0801a5d0   Data           0  fpconst.o(c$$dinf)
+    __dbl_max                                0x0801a5d8   Data           0  fpconst.o(c$$dmax)
+    __ctype                                  0x0801a5ed   Data           0  lc_ctype_c.o(locale$$data)
+    shellCommand$$Base                       0x0801a70c   Number         0  commend.o(shellCommand)
+    shellCommandsfud                         0x0801a70c   Data          16  commend.o(shellCommand)
+    shellCommandreboot                       0x0801a71c   Data          16  commend.o(shellCommand)
+    shellCommandtime                         0x0801a72c   Data          16  commend.o(shellCommand)
+    shellCommandpwm                          0x0801a73c   Data          16  commend.o(shellCommand)
+    shellCommandvar                          0x0801a74c   Data          16  commend.o(shellCommand)
+    shellUserDefault                         0x0801a75c   Data          16  shell.o(shellCommand)
+    shellCommandsetVar                       0x0801a76c   Data          16  shell.o(shellCommand)
+    shellKey0x1B5B4100                       0x0801a77c   Data          16  shell.o(shellCommand)
+    shellKey0x1B5B4200                       0x0801a78c   Data          16  shell.o(shellCommand)
+    shellKey0x1B5B4300                       0x0801a79c   Data          16  shell.o(shellCommand)
+    shellKey0x1B5B4400                       0x0801a7ac   Data          16  shell.o(shellCommand)
+    shellKey0x09000000                       0x0801a7bc   Data          16  shell.o(shellCommand)
+    shellKey0x08000000                       0x0801a7cc   Data          16  shell.o(shellCommand)
+    shellKey0x7F000000                       0x0801a7dc   Data          16  shell.o(shellCommand)
+    shellKey0x1B5B337E                       0x0801a7ec   Data          16  shell.o(shellCommand)
+    shellKey0x0A000000                       0x0801a7fc   Data          16  shell.o(shellCommand)
+    shellKey0x0D000000                       0x0801a80c   Data          16  shell.o(shellCommand)
+    shellCommandhelp                         0x0801a81c   Data          16  shell.o(shellCommand)
+    shellCommandusers                        0x0801a82c   Data          16  shell.o(shellCommand)
+    shellCommandcmds                         0x0801a83c   Data          16  shell.o(shellCommand)
+    shellCommandvars                         0x0801a84c   Data          16  shell.o(shellCommand)
+    shellCommandkeys                         0x0801a85c   Data          16  shell.o(shellCommand)
+    shellCommandclear                        0x0801a86c   Data          16  shell.o(shellCommand)
+    SHT$$INIT_ARRAY$$Base                    0x0801a87c   Number         0  perf_counter.o(.init_array)
+    shellCommand$$Limit                      0x0801a87c   Number         0  shell.o(shellCommand)
+    SHT$$INIT_ARRAY$$Limit                   0x0801a880   Number         0  init_aeabi.o(.init_array)
     SystemCoreClock                          0x24000000   Data           4  system_stm32h7xx.o(.data.SystemCoreClock)
     SystemD2Clock                            0x24000004   Data           4  system_stm32h7xx.o(.data.SystemD2Clock)
     a                                        0x24000008   Data           4  commend.o(.data.a)
@@ -10965,9 +10964,9 @@ Memory Map of the image
 
   Image Entry point : 0x080002ad
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x0001a990, Max: 0x00020000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x0001a980, Max: 0x00020000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x0001a88c, Max: 0x00020000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x0001a880, Max: 0x00020000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -11236,9 +11235,9 @@ Memory Map of the image
     0x08005eb2   0x08005eb2   0x00000006   PAD
     0x08005eb8   0x08005eb8   0x00000002   Code   RO         1180    .text.HAL_I2C_ListenCpltCallback  stm32h7xx_hal_i2c.o
     0x08005eba   0x08005eba   0x00000006   PAD
-    0x08005ec0   0x08005ec0   0x0000001e   Code   RO         3456    .text.HAL_I2C_MasterRxCpltCallback  sht30.o
+    0x08005ec0   0x08005ec0   0x0000001e   Code   RO         3368    .text.HAL_I2C_MasterRxCpltCallback  sht30.o
     0x08005ede   0x08005ede   0x00000002   PAD
-    0x08005ee0   0x08005ee0   0x0000000c   Code   RO         3454    .text.HAL_I2C_MasterTxCpltCallback  sht30.o
+    0x08005ee0   0x08005ee0   0x0000000c   Code   RO         3366    .text.HAL_I2C_MasterTxCpltCallback  sht30.o
     0x08005eec   0x08005eec   0x00000004   PAD
     0x08005ef0   0x08005ef0   0x00000198   Code   RO         1146    .text.HAL_I2C_Master_Seq_Receive_DMA  stm32h7xx_hal_i2c.o
     0x08006088   0x08006088   0x000000e8   Code   RO         1144    .text.HAL_I2C_Master_Seq_Receive_IT  stm32h7xx_hal_i2c.o
@@ -11368,7 +11367,7 @@ Memory Map of the image
     0x0800a76c   0x0800a76c   0x00000004   PAD
     0x0800a770   0x0800a770   0x00000056   Code   RO         2132    .text.HAL_UARTEx_ReceiveToIdle_DMA  stm32h7xx_hal_uart_ex.o
     0x0800a7c6   0x0800a7c6   0x00000002   PAD
-    0x0800a7c8   0x0800a7c8   0x00000144   Code   RO         3366    .text.HAL_UARTEx_RxEventCallback  com_uart_port.o
+    0x0800a7c8   0x0800a7c8   0x00000144   Code   RO         3332    .text.HAL_UARTEx_RxEventCallback  com_uart_port.o
     0x0800a90c   0x0800a90c   0x00000004   PAD
     0x0800a910   0x0800a910   0x00000002   Code   RO         2108    .text.HAL_UARTEx_RxFifoFullCallback  stm32h7xx_hal_uart_ex.o
     0x0800a912   0x0800a912   0x00000006   PAD
@@ -11380,7 +11379,7 @@ Memory Map of the image
     0x0800aa4a   0x0800aa4a   0x00000006   PAD
     0x0800aa50   0x0800aa50   0x00000002   Code   RO         2106    .text.HAL_UARTEx_WakeupCallback  stm32h7xx_hal_uart_ex.o
     0x0800aa52   0x0800aa52   0x00000006   PAD
-    0x0800aa58   0x0800aa58   0x0000004e   Code   RO         3368    .text.HAL_UART_ErrorCallback  com_uart_port.o
+    0x0800aa58   0x0800aa58   0x0000004e   Code   RO         3334    .text.HAL_UART_ErrorCallback  com_uart_port.o
     0x0800aaa6   0x0800aaa6   0x00000002   PAD
     0x0800aaa8   0x0800aaa8   0x00000006   Code   RO         2079    .text.HAL_UART_GetError  stm32h7xx_hal_uart.o
     0x0800aaae   0x0800aaae   0x00000002   PAD
@@ -11397,7 +11396,7 @@ Memory Map of the image
     0x0800b26a   0x0800b26a   0x00000006   PAD
     0x0800b270   0x0800b270   0x00000094   Code   RO         1999    .text.HAL_UART_Transmit_DMA  stm32h7xx_hal_uart.o
     0x0800b304   0x0800b304   0x00000004   PAD
-    0x0800b308   0x0800b308   0x0000003e   Code   RO         3364    .text.HAL_UART_TxCpltCallback  com_uart_port.o
+    0x0800b308   0x0800b308   0x0000003e   Code   RO         3330    .text.HAL_UART_TxCpltCallback  com_uart_port.o
     0x0800b346   0x0800b346   0x00000002   PAD
     0x0800b348   0x0800b348   0x00000002   Code   RO         2053    .text.HAL_UART_TxHalfCpltCallback  stm32h7xx_hal_uart.o
     0x0800b34a   0x0800b34a   0x00000006   PAD
@@ -11520,11 +11519,11 @@ Memory Map of the image
     0x0800e3e2   0x0800e3e2   0x00000006   PAD
     0x0800e3e8   0x0800e3e8   0x00000024   Code   RO          919    .text.__NVIC_SystemReset  stm32h7xx_hal_cortex.o
     0x0800e40c   0x0800e40c   0x00000004   PAD
-    0x0800e410   0x0800e410   0x00000044   Code   RO         3342    .text.__kfifo_get   kfifo.o
+    0x0800e410   0x0800e410   0x00000044   Code   RO         3585    .text.__kfifo_get   kfifo.o
     0x0800e454   0x0800e454   0x00000004   PAD
-    0x0800e458   0x0800e458   0x0000003e   Code   RO         3346    .text.__kfifo_get_try  kfifo.o
+    0x0800e458   0x0800e458   0x0000003e   Code   RO         3589    .text.__kfifo_get_try  kfifo.o
     0x0800e496   0x0800e496   0x00000002   PAD
-    0x0800e498   0x0800e498   0x00000046   Code   RO         3340    .text.__kfifo_put   kfifo.o
+    0x0800e498   0x0800e498   0x00000046   Code   RO         3583    .text.__kfifo_put   kfifo.o
     0x0800e4de   0x0800e4de   0x00000002   PAD
     0x0800e4e0   0x0800e4e0   0x000000b4   Code   RO         3913    .text.__perf_counter_init  perf_counter.o
     0x0800e594   0x0800e594   0x00000004   PAD
@@ -11534,60 +11533,60 @@ Memory Map of the image
     0x0800e5a2   0x0800e5a2   0x00000006   PAD
     0x0800e5a8   0x0800e5a8   0x00000002   Code   RO         3307    .text._ttywrch      common.o
     0x0800e5aa   0x0800e5aa   0x00000006   PAD
-    0x0800e5b0   0x0800e5b0   0x00000140   Code   RO         3556    .text.calculate_timer_values  tim_pwm.o
+    0x0800e5b0   0x0800e5b0   0x00000140   Code   RO         3396    .text.calculate_timer_values  tim_pwm.o
     0x0800e6f0   0x0800e6f0   0x00000104   Code   RO         3852    .text.check_and_update_part_cache  fal_partition.o
     0x0800e7f4   0x0800e7f4   0x00000004   PAD
-    0x0800e7f8   0x0800e7f8   0x0000004c   Code   RO         3400    .text.com_check_task  com_component.o
+    0x0800e7f8   0x0800e7f8   0x0000004c   Code   RO         3458    .text.com_check_task  com_component.o
     0x0800e844   0x0800e844   0x00000004   PAD
-    0x0800e848   0x0800e848   0x00000030   Code   RO         3480    .text.com_i2c_init  com_component_i2c.o
-    0x0800e878   0x0800e878   0x0000006c   Code   RO         3478    .text.com_i2c_rx_cplt  com_component_i2c.o
+    0x0800e848   0x0800e848   0x00000030   Code   RO         3503    .text.com_i2c_init  com_component_i2c.o
+    0x0800e878   0x0800e878   0x0000006c   Code   RO         3501    .text.com_i2c_rx_cplt  com_component_i2c.o
     0x0800e8e4   0x0800e8e4   0x00000004   PAD
-    0x0800e8e8   0x0800e8e8   0x00000104   Code   RO         3476    .text.com_i2c_start_rx  com_component_i2c.o
+    0x0800e8e8   0x0800e8e8   0x00000104   Code   RO         3499    .text.com_i2c_start_rx  com_component_i2c.o
     0x0800e9ec   0x0800e9ec   0x00000004   PAD
-    0x0800e9f0   0x0800e9f0   0x00000108   Code   RO         3470    .text.com_i2c_tx    com_component_i2c.o
-    0x0800eaf8   0x0800eaf8   0x00000066   Code   RO         3474    .text.com_i2c_tx_cplt  com_component_i2c.o
+    0x0800e9f0   0x0800e9f0   0x00000108   Code   RO         3493    .text.com_i2c_tx    com_component_i2c.o
+    0x0800eaf8   0x0800eaf8   0x00000066   Code   RO         3497    .text.com_i2c_tx_cplt  com_component_i2c.o
     0x0800eb5e   0x0800eb5e   0x00000002   PAD
-    0x0800eb60   0x0800eb60   0x000001ec   Code   RO         3418    .text.com_init      com_component.o
+    0x0800eb60   0x0800eb60   0x000001ec   Code   RO         3476    .text.com_init      com_component.o
     0x0800ed4c   0x0800ed4c   0x00000004   PAD
-    0x0800ed50   0x0800ed50   0x00000032   Code   RO         3386    .text.com_queue_init  com_component.o
+    0x0800ed50   0x0800ed50   0x00000032   Code   RO         3444    .text.com_queue_init  com_component.o
     0x0800ed82   0x0800ed82   0x00000006   PAD
-    0x0800ed88   0x0800ed88   0x0000001e   Code   RO         3388    .text.com_queue_init_iic  com_component.o
+    0x0800ed88   0x0800ed88   0x0000001e   Code   RO         3446    .text.com_queue_init_iic  com_component.o
     0x0800eda6   0x0800eda6   0x00000002   PAD
-    0x0800eda8   0x0800eda8   0x000000e4   Code   RO         3392    .text.com_queue_put  com_component.o
+    0x0800eda8   0x0800eda8   0x000000e4   Code   RO         3450    .text.com_queue_put  com_component.o
     0x0800ee8c   0x0800ee8c   0x00000004   PAD
-    0x0800ee90   0x0800ee90   0x00000076   Code   RO         3394    .text.com_queue_put_rx  com_component.o
+    0x0800ee90   0x0800ee90   0x00000076   Code   RO         3452    .text.com_queue_put_rx  com_component.o
     0x0800ef06   0x0800ef06   0x00000002   PAD
-    0x0800ef08   0x0800ef08   0x0000000e   Code   RO         3420    .text.com_register_driver  com_component.o
+    0x0800ef08   0x0800ef08   0x0000000e   Code   RO         3478    .text.com_register_driver  com_component.o
     0x0800ef16   0x0800ef16   0x00000002   PAD
-    0x0800ef18   0x0800ef18   0x00000024   Code   RO         3414    .text.com_rx_get    com_component.o
+    0x0800ef18   0x0800ef18   0x00000024   Code   RO         3472    .text.com_rx_get    com_component.o
     0x0800ef3c   0x0800ef3c   0x00000004   PAD
-    0x0800ef40   0x0800ef40   0x0000000a   Code   RO         3410    .text.com_rx_inquire_data  com_component.o
+    0x0800ef40   0x0800ef40   0x0000000a   Code   RO         3468    .text.com_rx_inquire_data  com_component.o
     0x0800ef4a   0x0800ef4a   0x00000006   PAD
-    0x0800ef50   0x0800ef50   0x00000004   Code   RO         3408    .text.com_rx_start  com_component.o
+    0x0800ef50   0x0800ef50   0x00000004   Code   RO         3466    .text.com_rx_start  com_component.o
     0x0800ef54   0x0800ef54   0x00000004   PAD
-    0x0800ef58   0x0800ef58   0x0000003c   Code   RO         3384    .text.com_rx_wait   com_component.o
+    0x0800ef58   0x0800ef58   0x0000003c   Code   RO         3442    .text.com_rx_wait   com_component.o
     0x0800ef94   0x0800ef94   0x00000004   PAD
-    0x0800ef98   0x0800ef98   0x0000002e   Code   RO         3503    .text.com_spi_rx_cplt  com_component_spi.o
+    0x0800ef98   0x0800ef98   0x0000002e   Code   RO         3526    .text.com_spi_rx_cplt  com_component_spi.o
     0x0800efc6   0x0800efc6   0x00000002   PAD
-    0x0800efc8   0x0800efc8   0x0000009a   Code   RO         3501    .text.com_spi_start_rx  com_component_spi.o
+    0x0800efc8   0x0800efc8   0x0000009a   Code   RO         3524    .text.com_spi_start_rx  com_component_spi.o
     0x0800f062   0x0800f062   0x00000006   PAD
-    0x0800f068   0x0800f068   0x0000007e   Code   RO         3495    .text.com_spi_try_communite  com_component_spi.o
+    0x0800f068   0x0800f068   0x0000007e   Code   RO         3518    .text.com_spi_try_communite  com_component_spi.o
     0x0800f0e6   0x0800f0e6   0x00000002   PAD
-    0x0800f0e8   0x0800f0e8   0x0000009c   Code   RO         3497    .text.com_spi_tx    com_component_spi.o
+    0x0800f0e8   0x0800f0e8   0x0000009c   Code   RO         3520    .text.com_spi_tx    com_component_spi.o
     0x0800f184   0x0800f184   0x00000004   PAD
-    0x0800f188   0x0800f188   0x00000026   Code   RO         3499    .text.com_spi_tx_cplt  com_component_spi.o
+    0x0800f188   0x0800f188   0x00000026   Code   RO         3522    .text.com_spi_tx_cplt  com_component_spi.o
     0x0800f1ae   0x0800f1ae   0x00000002   PAD
-    0x0800f1b0   0x0800f1b0   0x0000003c   Code   RO         3382    .text.com_tx_wait   com_component.o
+    0x0800f1b0   0x0800f1b0   0x0000003c   Code   RO         3440    .text.com_tx_wait   com_component.o
     0x0800f1ec   0x0800f1ec   0x00000004   PAD
-    0x0800f1f0   0x0800f1f0   0x00000032   Code   RO         3530    .text.com_uart_rx_pack_cplt  com_component_uart.o
+    0x0800f1f0   0x0800f1f0   0x00000032   Code   RO         3553    .text.com_uart_rx_pack_cplt  com_component_uart.o
     0x0800f222   0x0800f222   0x00000006   PAD
-    0x0800f228   0x0800f228   0x00000016   Code   RO         3526    .text.com_uart_rx_start  com_component_uart.o
+    0x0800f228   0x0800f228   0x00000016   Code   RO         3549    .text.com_uart_rx_start  com_component_uart.o
     0x0800f23e   0x0800f23e   0x00000002   PAD
-    0x0800f240   0x0800f240   0x00000064   Code   RO         3518    .text.com_uart_tx   com_component_uart.o
+    0x0800f240   0x0800f240   0x00000064   Code   RO         3541    .text.com_uart_tx   com_component_uart.o
     0x0800f2a4   0x0800f2a4   0x00000004   PAD
-    0x0800f2a8   0x0800f2a8   0x0000006c   Code   RO         3522    .text.com_uart_tx_cplt  com_component_uart.o
+    0x0800f2a8   0x0800f2a8   0x0000006c   Code   RO         3545    .text.com_uart_tx_cplt  com_component_uart.o
     0x0800f314   0x0800f314   0x00000004   PAD
-    0x0800f318   0x0800f318   0x0000009a   Code   RO         3362    .text.com_user_init  com_uart_port.o
+    0x0800f318   0x0800f318   0x0000009a   Code   RO         3328    .text.com_user_init  com_uart_port.o
     0x0800f3b2   0x0800f3b2   0x00000006   PAD
     0x0800f3b8   0x0800f3b8   0x00000010   Code   RO         3225    .text.cs_off_w25q_spi  sfud_port.o
     0x0800f3c8   0x0800f3c8   0x00000010   Code   RO         3223    .text.cs_on_w25q_spi  sfud_port.o
@@ -11639,24 +11638,24 @@ Memory Map of the image
     0x08010880   0x08010880   0x000000d0   Code   RO         3909    .text.init_cycle_counter  perf_counter.o
     0x08010950   0x08010950   0x0000002e   Code   RO         3882    .text.init_spiflash  fal_flash_sfud_port.o
     0x0801097e   0x0801097e   0x00000002   PAD
-    0x08010980   0x08010980   0x0000020c   Code   RO         3587    .text.ins330_handle  ins330.o
+    0x08010980   0x08010980   0x0000020c   Code   RO         3427    .text.ins330_handle  ins330.o
     0x08010b8c   0x08010b8c   0x00000004   PAD
-    0x08010b90   0x08010b90   0x0000000a   Code   RO         3583    .text.ins330_init   ins330.o
+    0x08010b90   0x08010b90   0x0000000a   Code   RO         3423    .text.ins330_init   ins330.o
     0x08010b9a   0x08010b9a   0x00000006   PAD
-    0x08010ba0   0x08010ba0   0x00000010   Code   RO         3585    .text.ins330_show_test  ins330.o
-    0x08010bb0   0x08010bb0   0x000000be   Code   RO         3336    .text.kfifo_alloc   kfifo.o
+    0x08010ba0   0x08010ba0   0x00000010   Code   RO         3425    .text.ins330_show_test  ins330.o
+    0x08010bb0   0x08010bb0   0x000000be   Code   RO         3579    .text.kfifo_alloc   kfifo.o
     0x08010c6e   0x08010c6e   0x00000002   PAD
-    0x08010c70   0x08010c70   0x0000005e   Code   RO         3446    .text.ll_iic_rx     sht30.o
+    0x08010c70   0x08010c70   0x0000005e   Code   RO         3358    .text.ll_iic_rx     sht30.o
     0x08010cce   0x08010cce   0x00000002   PAD
-    0x08010cd0   0x08010cd0   0x0000002a   Code   RO         3444    .text.ll_iic_tx     sht30.o
+    0x08010cd0   0x08010cd0   0x0000002a   Code   RO         3356    .text.ll_iic_tx     sht30.o
     0x08010cfa   0x08010cfa   0x00000006   PAD
     0x08010d00   0x08010d00   0x00000022   Code   RO         3229    .text.ll_spi_rx     sfud_port.o
     0x08010d22   0x08010d22   0x00000006   PAD
     0x08010d28   0x08010d28   0x0000004e   Code   RO         3227    .text.ll_spi_tx     sfud_port.o
     0x08010d76   0x08010d76   0x00000002   PAD
-    0x08010d78   0x08010d78   0x0000000c   Code   RO         3358    .text.ll_uart_rx    com_uart_port.o
+    0x08010d78   0x08010d78   0x0000000c   Code   RO         3324    .text.ll_uart_rx    com_uart_port.o
     0x08010d84   0x08010d84   0x00000004   PAD
-    0x08010d88   0x08010d88   0x0000003a   Code   RO         3356    .text.ll_uart_tx    com_uart_port.o
+    0x08010d88   0x08010d88   0x0000003a   Code   RO         3322    .text.ll_uart_tx    com_uart_port.o
     0x08010dc2   0x08010dc2   0x00000006   PAD
     0x08010dc8   0x08010dc8   0x00000136   Code   RO           11    .text.main          main.o
     0x08010efe   0x08010efe   0x00000002   PAD
@@ -11782,7 +11781,7 @@ Memory Map of the image
     0x08015850   0x08015850   0x000000c8   Code   RO         2815    .text.shellWritePrompt  shell.o
     0x08015918   0x08015918   0x00000154   Code   RO         2863    .text.shellWriteReturnValue  shell.o
     0x08015a6c   0x08015a6c   0x00000004   PAD
-    0x08015a70   0x08015a70   0x00000026   Code   RO         3448    .text.sht30_init    sht30.o
+    0x08015a70   0x08015a70   0x00000026   Code   RO         3360    .text.sht30_init    sht30.o
     0x08015a96   0x08015a96   0x00000002   PAD
     0x08015a98   0x08015a98   0x00000002   Code   RO         3219    .text.spi_lock      sfud_port.o
     0x08015a9a   0x08015a9a   0x00000006   PAD
@@ -11791,21 +11790,21 @@ Memory Map of the image
     0x08015aa8   0x08015aa8   0x00000208   Code   RO         3233    .text.spi_write_read  sfud_port.o
     0x08015cb0   0x08015cb0   0x00000004   Code   RO         3235    .text.spi_write_read_qspi  sfud_port.o
     0x08015cb4   0x08015cb4   0x00000004   PAD
-    0x08015cb8   0x08015cb8   0x00000004   Code   RO         3322    .text.spin_lock_irqrestore  kfifo.o
+    0x08015cb8   0x08015cb8   0x00000004   Code   RO         3565    .text.spin_lock_irqrestore  kfifo.o
     0x08015cbc   0x08015cbc   0x00000004   PAD
-    0x08015cc0   0x08015cc0   0x00000004   Code   RO         3324    .text.spin_unlock_irqrestore  kfifo.o
+    0x08015cc0   0x08015cc0   0x00000004   Code   RO         3567    .text.spin_unlock_irqrestore  kfifo.o
     0x08015cc4   0x08015cc4   0x00000004   PAD
     0x08015cc8   0x08015cc8   0x00000104   Code   RO         2772    .text.tim_ctrl      commend.o
     0x08015dcc   0x08015dcc   0x00000004   PAD
-    0x08015dd0   0x08015dd0   0x00000084   Code   RO         3552    .text.tim_pwm_get_duty  tim_pwm.o
+    0x08015dd0   0x08015dd0   0x00000084   Code   RO         3392    .text.tim_pwm_get_duty  tim_pwm.o
     0x08015e54   0x08015e54   0x00000004   PAD
-    0x08015e58   0x08015e58   0x0000003e   Code   RO         3562    .text.tim_pwm_get_freq  tim_pwm.o
+    0x08015e58   0x08015e58   0x0000003e   Code   RO         3402    .text.tim_pwm_get_freq  tim_pwm.o
     0x08015e96   0x08015e96   0x00000002   PAD
-    0x08015e98   0x08015e98   0x00000032   Code   RO         3546    .text.tim_pwm_init  tim_pwm.o
+    0x08015e98   0x08015e98   0x00000032   Code   RO         3386    .text.tim_pwm_init  tim_pwm.o
     0x08015eca   0x08015eca   0x00000006   PAD
-    0x08015ed0   0x08015ed0   0x000000c4   Code   RO         3548    .text.tim_pwm_set_duty  tim_pwm.o
+    0x08015ed0   0x08015ed0   0x000000c4   Code   RO         3388    .text.tim_pwm_set_duty  tim_pwm.o
     0x08015f94   0x08015f94   0x00000004   PAD
-    0x08015f98   0x08015f98   0x00000124   Code   RO         3560    .text.tim_pwm_set_freq  tim_pwm.o
+    0x08015f98   0x08015f98   0x00000124   Code   RO         3400    .text.tim_pwm_set_freq  tim_pwm.o
     0x080160bc   0x080160bc   0x00000004   PAD
     0x080160c0   0x080160c0   0x00000088   Code   RO         2770    .text.time          commend.o
     0x08016148   0x08016148   0x00000070   Code   RO         3001    .text.userShellInit  shell_port.o
@@ -12022,70 +12021,69 @@ Memory Map of the image
     0x08019613   0x08019613   0x00000400   Data   RO         3183    .rodata.str1.1      sfud.o
     0x08019a13   0x08019a13   0x0000064c   Data   RO         3200    .rodata.str1.1      sfud_sfdp.o
     0x0801a05f   0x0801a05f   0x000001b8   Data   RO         3246    .rodata.str1.1      sfud_port.o
-    0x0801a217   0x0801a217   0x0000005f   Data   RO         3426    .rodata.str1.1      com_component.o
-    0x0801a276   0x0801a276   0x00000044   Data   RO         3482    .rodata.str1.1      com_component_i2c.o
-    0x0801a2ba   0x0801a2ba   0x00000081   Data   RO         3505    .rodata.str1.1      com_component_spi.o
-    0x0801a33b   0x0801a33b   0x0000002f   Data   RO         3573    .rodata.str1.1      tim_pwm.o
-    0x0801a36a   0x0801a36a   0x00000020   Data   RO         3825    .rodata.str1.1      fal.o
-    0x0801a38a   0x0801a38a   0x000000a0   Data   RO         3839    .rodata.str1.1      fal_flash.o
-    0x0801a42a   0x0801a42a   0x00000124   Data   RO         3870    .rodata.str1.1      fal_partition.o
-    0x0801a54e   0x0801a54e   0x00000047   Data   RO         3892    .rodata.str1.1      fal_flash_sfud_port.o
-    0x0801a595   0x0801a595   0x00000003   PAD
-    0x0801a598   0x0801a598   0x00000024   Data   RO           57    .rodata.testTask_attributes  freertos.o
-    0x0801a5bc   0x0801a5bc   0x00000020   Data   RO         4621    Region$$Table       anon$$obj.o
-    0x0801a5dc   0x0801a5dc   0x00000008   Data   RO         4500    c$$dinf             fz_wv.l(fpconst.o)
-    0x0801a5e4   0x0801a5e4   0x00000008   Data   RO         4503    c$$dmax             fz_wv.l(fpconst.o)
-    0x0801a5ec   0x0801a5ec   0x00000110   Data   RO         4422    locale$$data        c_w.l(lc_ctype_c.o)
-    0x0801a6fc   0x0801a6fc   0x0000001c   Data   RO         4425    locale$$data        c_w.l(lc_numeric_c.o)
-    0x0801a718   0x0801a718   0x00000010   Data   RO         2787    shellCommand        commend.o
-    0x0801a728   0x0801a728   0x00000010   Data   RO         2790    shellCommand        commend.o
-    0x0801a738   0x0801a738   0x00000010   Data   RO         2793    shellCommand        commend.o
-    0x0801a748   0x0801a748   0x00000010   Data   RO         2796    shellCommand        commend.o
-    0x0801a758   0x0801a758   0x00000010   Data   RO         2799    shellCommand        commend.o
-    0x0801a768   0x0801a768   0x00000010   Data   RO         2912    shellCommand        shell.o
-    0x0801a778   0x0801a778   0x00000010   Data   RO         2917    shellCommand        shell.o
-    0x0801a788   0x0801a788   0x00000010   Data   RO         2919    shellCommand        shell.o
-    0x0801a798   0x0801a798   0x00000010   Data   RO         2921    shellCommand        shell.o
-    0x0801a7a8   0x0801a7a8   0x00000010   Data   RO         2923    shellCommand        shell.o
-    0x0801a7b8   0x0801a7b8   0x00000010   Data   RO         2925    shellCommand        shell.o
-    0x0801a7c8   0x0801a7c8   0x00000010   Data   RO         2927    shellCommand        shell.o
-    0x0801a7d8   0x0801a7d8   0x00000010   Data   RO         2929    shellCommand        shell.o
-    0x0801a7e8   0x0801a7e8   0x00000010   Data   RO         2931    shellCommand        shell.o
-    0x0801a7f8   0x0801a7f8   0x00000010   Data   RO         2933    shellCommand        shell.o
-    0x0801a808   0x0801a808   0x00000010   Data   RO         2935    shellCommand        shell.o
-    0x0801a818   0x0801a818   0x00000010   Data   RO         2937    shellCommand        shell.o
-    0x0801a828   0x0801a828   0x00000010   Data   RO         2940    shellCommand        shell.o
-    0x0801a838   0x0801a838   0x00000010   Data   RO         2943    shellCommand        shell.o
-    0x0801a848   0x0801a848   0x00000010   Data   RO         2946    shellCommand        shell.o
-    0x0801a858   0x0801a858   0x00000010   Data   RO         2949    shellCommand        shell.o
-    0x0801a868   0x0801a868   0x00000010   Data   RO         2952    shellCommand        shell.o
-    0x0801a878   0x0801a878   0x00000010   Data   RO         2955    shellCommand        shell.o
-    0x0801a888   0x0801a888   0x00000004   Data   RO         3975    .init_array         perf_counter.o
-    0x0801a88c   0x0801a888   0x00000000   Data   RO         4164    .init_array         c_w.l(init_aeabi.o)
+    0x0801a217   0x0801a217   0x00000036   Data   RO         3413    .rodata.str1.1      tim_pwm.o
+    0x0801a24d   0x0801a24d   0x00000055   Data   RO         3484    .rodata.str1.1      com_component.o
+    0x0801a2a2   0x0801a2a2   0x00000041   Data   RO         3505    .rodata.str1.1      com_component_i2c.o
+    0x0801a2e3   0x0801a2e3   0x0000007e   Data   RO         3528    .rodata.str1.1      com_component_spi.o
+    0x0801a361   0x0801a361   0x00000020   Data   RO         3825    .rodata.str1.1      fal.o
+    0x0801a381   0x0801a381   0x000000a0   Data   RO         3839    .rodata.str1.1      fal_flash.o
+    0x0801a421   0x0801a421   0x00000124   Data   RO         3870    .rodata.str1.1      fal_partition.o
+    0x0801a545   0x0801a545   0x00000047   Data   RO         3892    .rodata.str1.1      fal_flash_sfud_port.o
+    0x0801a58c   0x0801a58c   0x00000024   Data   RO           57    .rodata.testTask_attributes  freertos.o
+    0x0801a5b0   0x0801a5b0   0x00000020   Data   RO         4621    Region$$Table       anon$$obj.o
+    0x0801a5d0   0x0801a5d0   0x00000008   Data   RO         4500    c$$dinf             fz_wv.l(fpconst.o)
+    0x0801a5d8   0x0801a5d8   0x00000008   Data   RO         4503    c$$dmax             fz_wv.l(fpconst.o)
+    0x0801a5e0   0x0801a5e0   0x00000110   Data   RO         4422    locale$$data        c_w.l(lc_ctype_c.o)
+    0x0801a6f0   0x0801a6f0   0x0000001c   Data   RO         4425    locale$$data        c_w.l(lc_numeric_c.o)
+    0x0801a70c   0x0801a70c   0x00000010   Data   RO         2787    shellCommand        commend.o
+    0x0801a71c   0x0801a71c   0x00000010   Data   RO         2790    shellCommand        commend.o
+    0x0801a72c   0x0801a72c   0x00000010   Data   RO         2793    shellCommand        commend.o
+    0x0801a73c   0x0801a73c   0x00000010   Data   RO         2796    shellCommand        commend.o
+    0x0801a74c   0x0801a74c   0x00000010   Data   RO         2799    shellCommand        commend.o
+    0x0801a75c   0x0801a75c   0x00000010   Data   RO         2912    shellCommand        shell.o
+    0x0801a76c   0x0801a76c   0x00000010   Data   RO         2917    shellCommand        shell.o
+    0x0801a77c   0x0801a77c   0x00000010   Data   RO         2919    shellCommand        shell.o
+    0x0801a78c   0x0801a78c   0x00000010   Data   RO         2921    shellCommand        shell.o
+    0x0801a79c   0x0801a79c   0x00000010   Data   RO         2923    shellCommand        shell.o
+    0x0801a7ac   0x0801a7ac   0x00000010   Data   RO         2925    shellCommand        shell.o
+    0x0801a7bc   0x0801a7bc   0x00000010   Data   RO         2927    shellCommand        shell.o
+    0x0801a7cc   0x0801a7cc   0x00000010   Data   RO         2929    shellCommand        shell.o
+    0x0801a7dc   0x0801a7dc   0x00000010   Data   RO         2931    shellCommand        shell.o
+    0x0801a7ec   0x0801a7ec   0x00000010   Data   RO         2933    shellCommand        shell.o
+    0x0801a7fc   0x0801a7fc   0x00000010   Data   RO         2935    shellCommand        shell.o
+    0x0801a80c   0x0801a80c   0x00000010   Data   RO         2937    shellCommand        shell.o
+    0x0801a81c   0x0801a81c   0x00000010   Data   RO         2940    shellCommand        shell.o
+    0x0801a82c   0x0801a82c   0x00000010   Data   RO         2943    shellCommand        shell.o
+    0x0801a83c   0x0801a83c   0x00000010   Data   RO         2946    shellCommand        shell.o
+    0x0801a84c   0x0801a84c   0x00000010   Data   RO         2949    shellCommand        shell.o
+    0x0801a85c   0x0801a85c   0x00000010   Data   RO         2952    shellCommand        shell.o
+    0x0801a86c   0x0801a86c   0x00000010   Data   RO         2955    shellCommand        shell.o
+    0x0801a87c   0x0801a87c   0x00000004   Data   RO         3975    .init_array         perf_counter.o
+    0x0801a880   0x0801a87c   0x00000000   Data   RO         4164    .init_array         c_w.l(init_aeabi.o)
 
 
-    Execution Region RW_IRAM2 (Exec base: 0x24000000, Load base: 0x0801a890, Size: 0x0002e6a8, Max: 0x00100000, ABSOLUTE)
+    Execution Region RW_IRAM2 (Exec base: 0x24000000, Load base: 0x0801a880, Size: 0x0002e6a8, Max: 0x00100000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x24000000   0x0801a890   0x00000004   Data   RW         2149    .data.SystemCoreClock  system_stm32h7xx.o
-    0x24000004   0x0801a894   0x00000004   Data   RW         2150    .data.SystemD2Clock  system_stm32h7xx.o
-    0x24000008   0x0801a898   0x00000004   Data   RW         2779    .data.a             commend.o
-    0x2400000c   0x0801a89c   0x00000001   Data   RW         2781    .data.b             commend.o
-    0x2400000d   0x0801a89d   0x00000003   PAD
-    0x24000010   0x0801a8a0   0x00000008   Data   RW         2782    .data.c             commend.o
-    0x24000018   0x0801a8a8   0x00000004   Data   RW         2783    .data.d             commend.o
-    0x2400001c   0x0801a8ac   0x00000080   Data   RW         3184    .data.flash_table   sfud.o
-    0x2400009c   0x0801a92c   0x00000004   Data   RW         3969    .data.s_nMSUnit     perf_counter.o
-    0x240000a0   0x0801a930   0x00000004   Data   RW         3972    .data.s_nUSUnit     perf_counter.o
-    0x240000a4   0x0801a934   0x00000010   Data   RW         3248    .data.sfud_spi_port_init.user_w25q64_qspi  sfud_port.o
-    0x240000b4   0x0801a944   0x00000010   Data   RW         3247    .data.sfud_spi_port_init.user_w25q64_spi  sfud_port.o
-    0x240000c4   0x0801a954   0x0000002c   Data   RW         3890    .data.spi_flash0    fal_flash_sfud_port.o
-    0x240000f0   0x0801a980   0x00000001   Data   RW         1056    .data.uwTickFreq    stm32h7xx_hal.o
-    0x240000f1   0x0801a981   0x00000003   PAD
-    0x240000f4   0x0801a984   0x00000004   Data   RW         1055    .data.uwTickPrio    stm32h7xx_hal.o
-    0x240000f8   0x0801a988   0x00000004   Data   RW         2753    .data.uxCriticalNesting  port.o
-    0x240000fc   0x0801a98c   0x00000004   PAD
+    0x24000000   0x0801a880   0x00000004   Data   RW         2149    .data.SystemCoreClock  system_stm32h7xx.o
+    0x24000004   0x0801a884   0x00000004   Data   RW         2150    .data.SystemD2Clock  system_stm32h7xx.o
+    0x24000008   0x0801a888   0x00000004   Data   RW         2779    .data.a             commend.o
+    0x2400000c   0x0801a88c   0x00000001   Data   RW         2781    .data.b             commend.o
+    0x2400000d   0x0801a88d   0x00000003   PAD
+    0x24000010   0x0801a890   0x00000008   Data   RW         2782    .data.c             commend.o
+    0x24000018   0x0801a898   0x00000004   Data   RW         2783    .data.d             commend.o
+    0x2400001c   0x0801a89c   0x00000080   Data   RW         3184    .data.flash_table   sfud.o
+    0x2400009c   0x0801a91c   0x00000004   Data   RW         3969    .data.s_nMSUnit     perf_counter.o
+    0x240000a0   0x0801a920   0x00000004   Data   RW         3972    .data.s_nUSUnit     perf_counter.o
+    0x240000a4   0x0801a924   0x00000010   Data   RW         3248    .data.sfud_spi_port_init.user_w25q64_qspi  sfud_port.o
+    0x240000b4   0x0801a934   0x00000010   Data   RW         3247    .data.sfud_spi_port_init.user_w25q64_spi  sfud_port.o
+    0x240000c4   0x0801a944   0x0000002c   Data   RW         3890    .data.spi_flash0    fal_flash_sfud_port.o
+    0x240000f0   0x0801a970   0x00000001   Data   RW         1056    .data.uwTickFreq    stm32h7xx_hal.o
+    0x240000f1   0x0801a971   0x00000003   PAD
+    0x240000f4   0x0801a974   0x00000004   Data   RW         1055    .data.uwTickPrio    stm32h7xx_hal.o
+    0x240000f8   0x0801a978   0x00000004   Data   RW         2753    .data.uxCriticalNesting  port.o
+    0x240000fc   0x0801a97c   0x00000004   PAD
     0x24000100        -       0x00000060   Zero   RW         4357    .bss                c_w.l(libspace.o)
     0x24000160        -       0x00000004   Zero   RW           72    .bss.ADC_ConvertedValue  freertos.o
     0x24000164        -       0x00000004   Zero   RW           65    .bss.BinarySem_DebugOutPutHandle  freertos.o
@@ -12095,15 +12093,15 @@ Memory Map of the image
     0x24000174        -       0x00000004   Zero   RW         3313    .bss.__stdout       common.o
     0x24000178        -       0x00000004   Zero   RW         2778    .bss._var_begin     commend.o
     0x2400017c        -       0x00000004   Zero   RW         2780    .bss.a1             commend.o
-    0x24000180        -       0x00000078   Zero   RW         3370    .bss.com1           com_uart_port.o
-    0x240001f8        -       0x00000078   Zero   RW         3371    .bss.com2           com_uart_port.o
-    0x24000270        -       0x00000078   Zero   RW         3460    .bss.com_i2c1       sht30.o
+    0x24000180        -       0x00000078   Zero   RW         3336    .bss.com1           com_uart_port.o
+    0x240001f8        -       0x00000078   Zero   RW         3337    .bss.com2           com_uart_port.o
+    0x24000270        -       0x00000078   Zero   RW         3372    .bss.com_i2c1       sht30.o
     0x240002e8        -       0x00000078   Zero   RW         3245    .bss.com_spi        sfud_port.o
     0x24000360        -       0x00000004   Zero   RW           66    .bss.defaultTaskHandle  freertos.o
     0x24000364        -       0x000000a4   Zero   RW         3066    .bss.elog           elog.o
     0x24000408        -       0x00000004   Zero   RW         3068    .bss.elog_assert_hook  elog.o
-    0x2400040c        -       0x00000001   Zero   RW         3459    .bss.flag_rx        sht30.o
-    0x2400040d   0x0801a98c   0x00000003   PAD
+    0x2400040c        -       0x00000001   Zero   RW         3371    .bss.flag_rx        sht30.o
+    0x2400040d   0x0801a97c   0x00000003   PAD
     0x24000410        -       0x00000008   Zero   RW         3965    .bss.g_lLastTimeStamp  perf_counter.o
     0x24000418        -       0x00000004   Zero   RW         3966    .bss.g_nOffset      perf_counter.o
     0x2400041c        -       0x00000064   Zero   RW           87    .bss.hadc2          adc.o
@@ -12128,21 +12126,21 @@ Memory Map of the image
     0x24000cc0        -       0x00000001   Zero   RW         3824    .bss.init_ok        fal.o
     0x24000cc1        -       0x00000001   Zero   RW         3838    .bss.init_ok        fal_flash.o
     0x24000cc2        -       0x00000001   Zero   RW         3871    .bss.init_ok        fal_partition.o
-    0x24000cc3   0x0801a98c   0x00000001   PAD
+    0x24000cc3   0x0801a97c   0x00000001   PAD
     0x24000cc4        -       0x00000140   Zero   RW           70    .bss.ins330         freertos.o
-    0x24000e04        -       0x00000004   Zero   RW         3589    .bss.ins330_handle.state  ins330.o
+    0x24000e04        -       0x00000004   Zero   RW         3429    .bss.ins330_handle.state  ins330.o
     0x24000e08        -       0x00000400   Zero   RW         3069    .bss.log_buf        elog.o
     0x24001208        -       0x00000100   Zero   RW         3249    .bss.log_buf        sfud_port.o
     0x24001308        -       0x00000004   Zero   RW           68    .bss.lowPowerTaskHandle  freertos.o
     0x2400130c        -       0x00000105   Zero   RW         3187    .bss.page256_or_1_byte_write.cmd_data  sfud.o
-    0x24001411   0x0801a98c   0x00000003   PAD
+    0x24001411   0x0801a97c   0x00000003   PAD
     0x24001414        -       0x00000008   Zero   RW         3873    .bss.part_flash_cache  fal_partition.o
     0x2400141c        -       0x00000004   Zero   RW         3869    .bss.partition_table  fal_partition.o
     0x24001420        -       0x00000004   Zero   RW         3868    .bss.partition_table_len  fal_partition.o
     0x24001424        -       0x000000a0   Zero   RW         2525    .bss.prvCheckForValidListAndQueue.ucStaticTimerQueueStorage  timers.o
     0x240014c4        -       0x00000050   Zero   RW         2524    .bss.prvCheckForValidListAndQueue.xStaticTimerQueue  timers.o
     0x24001514        -       0x00000004   Zero   RW         2521    .bss.prvSampleTimeNow.xLastTime  timers.o
-    0x24001518        -       0x00000014   Zero   RW         3574    .bss.pwm0           tim_pwm.o
+    0x24001518        -       0x00000014   Zero   RW         3414    .bss.pwm0           tim_pwm.o
     0x2400152c        -       0x00000004   Zero   RW         2448    .bss.pxCurrentTCB   tasks.o
     0x24001530        -       0x00000004   Zero   RW         2519    .bss.pxCurrentTimerList  timers.o
     0x24001534        -       0x00000004   Zero   RW         2456    .bss.pxDelayedTaskList  tasks.o
@@ -12150,7 +12148,7 @@ Memory Map of the image
     0x2400153c        -       0x00000004   Zero   RW         2457    .bss.pxOverflowDelayedTaskList  tasks.o
     0x24001540        -       0x00000004   Zero   RW         2520    .bss.pxOverflowTimerList  timers.o
     0x24001544        -       0x00000460   Zero   RW         2459    .bss.pxReadyTasksLists  tasks.o
-    0x240019a4   0x0801a98c   0x00000004   PAD
+    0x240019a4   0x0801a97c   0x00000004   PAD
     0x240019a8        -       0x00000008   Zero   RW         3974    .bss.s_lOldTimestamp  perf_counter.o
     0x240019b0        -       0x00000008   Zero   RW         3967    .bss.s_lSystemClockCounts  perf_counter.o
     0x240019b8        -       0x00000004   Zero   RW         3970    .bss.s_nSystemMS    perf_counter.o
@@ -12161,14 +12159,14 @@ Memory Map of the image
     0x24001dc8        -       0x00000078   Zero   RW         3006    .bss.shell          shell_port.o
     0x24001e40        -       0x00000200   Zero   RW         3007    .bss.shellBuffer    shell_port.o
     0x24002040        -       0x00000009   Zero   RW         2956    .bss.shellGetCommandName.buffer  shell.o
-    0x24002049   0x0801a98c   0x00000003   PAD
+    0x24002049   0x0801a97c   0x00000003   PAD
     0x2400204c        -       0x00000014   Zero   RW         2913    .bss.shellList      shell.o
     0x24002060        -       0x00000200   Zero   RW           56    .bss.testTaskBuffer  freertos.o
     0x24002260        -       0x0000005c   Zero   RW           55    .bss.testTaskControlBlock  freertos.o
     0x240022bc        -       0x00000004   Zero   RW           67    .bss.testTaskHandle  freertos.o
     0x240022c0        -       0x00003c00   Zero   RW         2716    .bss.ucHeap         heap_4.o
     0x24005ec0        -       0x00000001   Zero   RW         2751    .bss.ucMaxSysCallPriority  port.o
-    0x24005ec1   0x0801a98c   0x00000003   PAD
+    0x24005ec1   0x0801a97c   0x00000003   PAD
     0x24005ec4        -       0x00000004   Zero   RW         2752    .bss.ulMaxPRIGROUPValue  port.o
     0x24005ec8        -       0x00000004   Zero   RW         1057    .bss.uwTick         stm32h7xx_hal.o
     0x24005ecc        -       0x00000004   Zero   RW         2452    .bss.uxCurrentNumberOfTasks  tasks.o
@@ -12183,7 +12181,7 @@ Memory Map of the image
     0x24006598        -       0x00000014   Zero   RW         2522    .bss.xActiveTimerList1  timers.o
     0x240065ac        -       0x00000014   Zero   RW         2523    .bss.xActiveTimerList2  timers.o
     0x240065c0        -       0x00000001   Zero   RW         2710    .bss.xBlockAllocatedBit  heap_4.o
-    0x240065c1   0x0801a98c   0x00000003   PAD
+    0x240065c1   0x0801a97c   0x00000003   PAD
     0x240065c4        -       0x00000014   Zero   RW         2467    .bss.xDelayedTaskList1  tasks.o
     0x240065d8        -       0x00000014   Zero   RW         2468    .bss.xDelayedTaskList2  tasks.o
     0x240065ec        -       0x00000004   Zero   RW         2711    .bss.xFreeBytesRemaining  heap_4.o
@@ -12216,81 +12214,81 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       346          0          0          0        220      10162   adc.o
-        68          0          0          0          0       5495   bdma2.o
-       896          0          0          0       1724      45580   cmsis_os2.o
-      1178        112         95          0          0      10931   com_component.o
-       782        128         68          0          0       6525   com_component_i2c.o
-       520          0        129          0          0       6092   com_component_spi.o
-       280          0          0          0          0       6415   com_component_uart.o
-       688          0          0          0        240      10819   com_uart_port.o
+       346          0          0          0        220      10183   adc.o
+        68          0          0          0          0       5516   bdma2.o
+       896          0          0          0       1724      45601   cmsis_os2.o
+      1178        112         85          0          0      10904   com_component.o
+       782        128         65          0          0       6503   com_component_i2c.o
+       520          0        126          0          0       6070   com_component_spi.o
+       280          0          0          0          0       6387   com_component_uart.o
+       688          0          0          0        240      10850   com_uart_port.o
       2020        326        291         17          8      13915   commend.o
         36          0          0          0          4       1605   common.o
-       148          0          0          0          0       5499   dma.o
-       152          0          0          0        104       7722   dma2d.o
-      3368         88        300          0       1192      14861   elog.o
-        70          0          0          0          0       1813   elog_port.o
-       258          0         63          0          0       2498   elog_utils.o
-       302          0          0          0          0      10206   event_groups.o
-       244        144         32          0          1       1152   fal.o
-       388        128        160          0          1       1975   fal_flash.o
-       392          0         71         44          4       4399   fal_flash_sfud_port.o
-       776        200        364          0         17       8085   fal_partition.o
-       618         64        240          0        956      15331   freertos.o
-       244          0          0          0          0       3166   gpio.o
-       680          0          0          0      15389       5057   heap_4.o
-       462          0          0          0        324      11648   i2c.o
-       550         20          0          0          4       2364   ins330.o
-       398          0          0          0          0       6495   kfifo.o
-       156          0          0          0          0       2212   list.o
-       574          0          0          0        168      10156   ltdc.o
+       148          0          0          0          0       5520   dma.o
+       152          0          0          0        104       7743   dma2d.o
+      3368         88        300          0       1192      14882   elog.o
+        70          0          0          0          0       1810   elog_port.o
+       258          0         63          0          0       2519   elog_utils.o
+       302          0          0          0          0      10227   event_groups.o
+       244        144         32          0          1       1173   fal.o
+       388        128        160          0          1       1996   fal_flash.o
+       392          0         71         44          4       4420   fal_flash_sfud_port.o
+       776        200        364          0         17       8106   fal_partition.o
+       618         64        240          0        956      15348   freertos.o
+       244          0          0          0          0       3187   gpio.o
+       680          0          0          0      15389       5078   heap_4.o
+       462          0          0          0        324      11669   i2c.o
+       550         20          0          0          4       2385   ins330.o
+       398          0          0          0          0       6469   kfifo.o
+       156          0          0          0          0       2233   list.o
+       574          0          0          0        168      10177   ltdc.o
        530          0          0          0          0      11300   main.o
-       428          0          0          0         92       8990   octospi.o
-       592          0          4          8         40      14566   perf_counter.o
-       880         16          0          4          5       3988   port.o
-      2386          0          0          0         64      24751   queue.o
-      4856        364       1160        128        261      23463   sfud.o
-      2034        460        440         32       1400      19492   sfud_port.o
-      1728        196       1612          0          0       7497   sfud_sfdp.o
-      6840        258        997          0         29      48075   shell.o
-       826         90          0          0          0       6638   shell_ext.o
-       234          8          0          0        632       7852   shell_port.o
-       216          0          0          0        121       9874   sht30.o
-       330          0          0          0        376      10099   spi.o
-        64         26        684          0     163840        836   startup_stm32h7b0xx.o
-       138          0          0          5          4      14472   stm32h7xx_hal.o
-      3204         18          0          0          0      24415   stm32h7xx_hal_adc.o
-        10          0          0          0          0      24892   stm32h7xx_hal_adc_ex.o
-       194          0          0          0          0      12231   stm32h7xx_hal_cortex.o
-      8752         54          0          0          0      18203   stm32h7xx_hal_dma.o
-       658          0          0          0          0      15475   stm32h7xx_hal_dma2d.o
-       440          0          0          0          0       6568   stm32h7xx_hal_gpio.o
-      5834          0          0          0          0      62870   stm32h7xx_hal_i2c.o
-       146          0          0          0          0       7267   stm32h7xx_hal_i2c_ex.o
-       844          0         32          0          0      15208   stm32h7xx_hal_ltdc.o
-        42          0          0          0          0       5531   stm32h7xx_hal_msp.o
-      2532          0          0          0          0      26842   stm32h7xx_hal_ospi.o
-        72          0          0          0          0      10588   stm32h7xx_hal_pwr_ex.o
-      2974         16          0          0          0      11969   stm32h7xx_hal_rcc.o
-      4958        192          0          0          0      17686   stm32h7xx_hal_rcc_ex.o
-      2262          0          0          0          0      21477   stm32h7xx_hal_spi.o
-      3206         14          0          0          0      64518   stm32h7xx_hal_tim.o
-       210          0          0          0          0      26090   stm32h7xx_hal_tim_ex.o
-       156          0          0          0         76       9767   stm32h7xx_hal_timebase_tim.o
-      4166        300         36          0          0      37527   stm32h7xx_hal_uart.o
-       442          0         16          0          0      11197   stm32h7xx_hal_uart_ex.o
-       228          0          0          0          0      15719   stm32h7xx_it.o
-       502         16         16          8          0       5730   system_stm32h7xx.o
-      3072          8          0          0       1280      37571   tasks.o
-       342          0          0          0         76       7779   tim.o
-      1052         66         47          0         20      11892   tim_pwm.o
-      1244         26          0          0        300      16966   timers.o
-       766          0          0          0        776      12157   usart.o
+       428          0          0          0         92       9011   octospi.o
+       592          0          4          8         40      14587   perf_counter.o
+       880         16          0          4          5       4009   port.o
+      2386          0          0          0         64      24772   queue.o
+      4856        364       1160        128        261      23484   sfud.o
+      2034        460        440         32       1400      19489   sfud_port.o
+      1728        196       1612          0          0       7518   sfud_sfdp.o
+      6840        258        997          0         29      48096   shell.o
+       826         90          0          0          0       6659   shell_ext.o
+       234          8          0          0        632       7849   shell_port.o
+       216          0          0          0        121       9891   sht30.o
+       330          0          0          0        376      10120   spi.o
+        64         26        684          0     163840        856   startup_stm32h7b0xx.o
+       138          0          0          5          4      14493   stm32h7xx_hal.o
+      3204         18          0          0          0      24436   stm32h7xx_hal_adc.o
+        10          0          0          0          0      24913   stm32h7xx_hal_adc_ex.o
+       194          0          0          0          0      12252   stm32h7xx_hal_cortex.o
+      8752         54          0          0          0      18224   stm32h7xx_hal_dma.o
+       658          0          0          0          0      15496   stm32h7xx_hal_dma2d.o
+       440          0          0          0          0       6589   stm32h7xx_hal_gpio.o
+      5834          0          0          0          0      62891   stm32h7xx_hal_i2c.o
+       146          0          0          0          0       7288   stm32h7xx_hal_i2c_ex.o
+       844          0         32          0          0      15229   stm32h7xx_hal_ltdc.o
+        42          0          0          0          0       5552   stm32h7xx_hal_msp.o
+      2532          0          0          0          0      26863   stm32h7xx_hal_ospi.o
+        72          0          0          0          0      10609   stm32h7xx_hal_pwr_ex.o
+      2974         16          0          0          0      11990   stm32h7xx_hal_rcc.o
+      4958        192          0          0          0      17707   stm32h7xx_hal_rcc_ex.o
+      2262          0          0          0          0      21498   stm32h7xx_hal_spi.o
+      3206         14          0          0          0      64539   stm32h7xx_hal_tim.o
+       210          0          0          0          0      26111   stm32h7xx_hal_tim_ex.o
+       156          0          0          0         76       9788   stm32h7xx_hal_timebase_tim.o
+      4166        300         36          0          0      37548   stm32h7xx_hal_uart.o
+       442          0         16          0          0      11218   stm32h7xx_hal_uart_ex.o
+       228          0          0          0          0      15740   stm32h7xx_it.o
+       502         16         16          8          0       5751   system_stm32h7xx.o
+      3072          8          0          0       1280      37592   tasks.o
+       342          0          0          0         76       7800   tim.o
+      1052         66         54          0         20      11913   tim_pwm.o
+      1244         26          0          0        300      16987   timers.o
+       766          0          0          0        776      12178   usart.o
 
     ----------------------------------------------------------------------
-     88508       3458       6892        252     189772     982206   Object Totals
+     88508       3458       6880        252     189772     983312   Object Totals
          0          0         32          0          0          0   (incl. Generated)
-      1524        120          3          6         24          0   (incl. Padding)
+      1524        120          0          6         24          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -12450,15 +12448,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-    101220       3952       7464        252     189868     984774   Grand Totals
-    101220       3952       7464        252     189868     984774   ELF Image Totals
-    101220       3952       7464        252          0          0   ROM Totals
+    101220       3952       7452        252     189868     985880   Grand Totals
+    101220       3952       7452        252     189868     985880   ELF Image Totals
+    101220       3952       7452        252          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)               108684 ( 106.14kB)
+    Total RO  Size (Code + RO Data)               108672 ( 106.12kB)
     Total RW  Size (RW Data + ZI Data)            190120 ( 185.66kB)
-    Total ROM Size (Code + RO Data + RW Data)     108936 ( 106.38kB)
+    Total ROM Size (Code + RO Data + RW Data)     108924 ( 106.37kB)
 
 ==============================================================================
 

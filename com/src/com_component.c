@@ -114,23 +114,23 @@ void com_queue_free(com_queue_t *queue)
 int8_t com_queue_put(com_queue_t *queue, uint32_t mode, uint32_t addr, uint8_t *pdata, uint32_t length)
 {
     com_task_t task = {
-        .magic_word = COMMAGIC_WORD,
+//        .magic_word = COMMAGIC_WORD,
         .pdata = pdata,
         .len = length,
-        .pdata_1 = pdata,
+//        .pdata_1 = pdata,
         .mode = mode,
         .addr = addr};
 
     if (kfifo_get_free(queue->datefifo) < length)
     {
-        log_e("no memory of data fifo\n");
+        printf("no memory of data fifo\n");
 
         return -1;
         // while(1);
     }
     if (kfifo_get_free(queue->taskfifo) < sizeof(task))
     {
-        log_e("no memory task fifo\n");
+        printf("no memory task fifo\n");
 
         return -2;
         // while(1);
@@ -175,23 +175,23 @@ int8_t com_queue_put(com_queue_t *queue, uint32_t mode, uint32_t addr, uint8_t *
 int8_t com_queue_put_rx(com_queue_t *queue, uint32_t mode, uint32_t addr, uint32_t length)
 {
     com_task_t task = {
-        .magic_word = COMMAGIC_WORD,
+//        .magic_word = COMMAGIC_WORD,
         .pdata = queue->datefifo->buffer + (queue->datefifo->out & (queue->datefifo->size - 1)),
         .len = length,
-        .pdata_1 = queue->datefifo->buffer + (queue->datefifo->out & (queue->datefifo->size - 1)),
+//        .pdata_1 = queue->datefifo->buffer + (queue->datefifo->out & (queue->datefifo->size - 1)),
         .mode = mode,
         .addr = addr};
 
     if (kfifo_get_free(queue->datefifo) < length)
     {
-        log_e("no memory of data fifo\n");
+        printf("no memory of data fifo\n");
 
         return -1;
         // while(1);
     }
     if (kfifo_get_free(queue->taskfifo) < sizeof(task))
     {
-        log_e("no memory task fifo\n");
+        printf("no memory task fifo\n");
 
         return -2;
         // while(1);
@@ -207,26 +207,8 @@ int8_t com_queue_get(com_queue_t *queue, uint8_t *pdata, uint32_t *length)
 
 bool com_check_task_right(com_t *com, com_queue_t *queue, com_task_t *task)
 {
-    if ((task->magic_word == COMMAGIC_WORD) && (task->pdata == task->pdata_1))
-    {
-        //        if (kfifo_get_used(queue->datefifo) < com->task.len)
-        //        {
-        //            // 数据有问题，退出
-        //            // TODO:待完善解决方案
-        //          log_e("iic date error!!!!!!!!!!!\n");
-        //					COM_TX_UNLOCK(com);
-        //					COM_RX_UNLOCK(com);
-        //
-        //          return false;
-        //        }
-        return true;
-    }
-    else
-    {
-        log_e("task date error!!!!!!!!!!!\n");
 
-        return false;
-    }
+	return true;
 }
 
 bool com_check_task(com_t *com, com_queue_t *queue, com_task_t *task)
@@ -298,13 +280,46 @@ void com_init(com_t *com, com_device_e type, com_init_t* init)
 {
     memset(com, 0, sizeof(com_init_t));
     com->type = type;
+//
+    // com->tx_queue.taskfifo = kfifo_alloc(init->tx_task_size, 0);
+    // com->tx_queue.datefifo = kfifo_alloc(init->tx_buf_size, 0);
+    // com->rx_queue.taskfifo = kfifo_alloc(init->rx_task_size, 0);
+    // com->rx_queue.datefifo = kfifo_alloc(init->rx_buf_size, 0);
 
-    com->tx_queue.taskfifo = kfifo_alloc(init->tx_task_size, 0);
-    com->tx_queue.datefifo = kfifo_alloc(init->tx_buf_size, 0);
-    com->rx_queue.taskfifo = kfifo_alloc(init->rx_task_size, 0);
-    com->rx_queue.datefifo = kfifo_alloc(init->rx_buf_size, 0);
 
-    if (com->tx_queue.taskfifo == NULL)
+    COM_TX_UNLOCK(com);
+    COM_RX_UNLOCK(com);
+    switch(type)
+    {
+        case com_type_uart:
+			com->tx_queue.taskfifo = kfifo_alloc(init->tx_task_size, 0);
+            com->tx_queue.datefifo = kfifo_alloc(init->tx_buf_size, 0);
+            com->rx_queue.taskfifo = kfifo_alloc(init->rx_task_size, 0);
+            com->rx_queue.datefifo = kfifo_alloc(init->rx_buf_size, 0);
+            com->com_tx = com_uart_tx;
+            com->com_rx_start = com_uart_rx_start; 
+            com->com_tx_cplt = com_uart_tx_cplt;
+            com->com_rx_pack_cplt = com_uart_rx_pack_cplt;
+            break;
+        case com_type_spi:
+        	com->tx_queue.taskfifo = kfifo_alloc(init->tx_task_size, 0);
+            com->tx_queue.datefifo = kfifo_alloc(init->tx_buf_size, 0);
+            com->rx_queue.taskfifo = com->tx_queue.taskfifo;
+            com->rx_queue.datefifo = kfifo_alloc(init->rx_buf_size, 0);
+        //TODO:
+            break;
+        case com_type_i2c:
+        com->com_tx = com_i2c_tx;
+        //com->com_rx_start = com_i2c_start_rx;
+				com->com_rx= com_i2c_start_rx;
+        com->com_tx_cplt = com_i2c_tx_cplt;
+        com->com_rx_pack_cplt = com_i2c_rx_cplt;
+            break;
+
+        default:
+            break;
+    }
+		if (com->tx_queue.taskfifo == NULL)
     {
         log_e("tx task fifo init error\n");
     }  
@@ -319,30 +334,6 @@ void com_init(com_t *com, com_device_e type, com_init_t* init)
     if (com->rx_queue.datefifo == NULL)
     {
         log_e("rx data fifo init error\n");
-    }
-    COM_TX_UNLOCK(com);
-    COM_RX_UNLOCK(com);
-    switch(type)
-    {
-        case com_type_uart:
-        com->com_tx = com_uart_tx;
-        com->com_rx_start = com_uart_rx_start; 
-        com->com_tx_cplt = com_uart_tx_cplt;
-        com->com_rx_pack_cplt = com_uart_rx_pack_cplt;
-            break;
-        case com_type_spi:
-        //TODO:
-            break;
-        case com_type_i2c:
-        com->com_tx = com_i2c_tx;
-        //com->com_rx_start = com_i2c_start_rx;
-				com->com_rx= com_i2c_start_rx;
-        com->com_tx_cplt = com_i2c_tx_cplt;
-        com->com_rx_pack_cplt = com_i2c_rx_cplt;
-            break;
-
-        default:
-            break;
     }
 }
 void com_register_driver(com_t *com, com_driver_t* driver)

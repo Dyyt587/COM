@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32H7B0xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32H7xx_HAL_Driver/Inc;../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;../Drivers/CMSIS/Device/ST/STM32H7xx/Include;../Drivers/CMSIS/Include;../Middlewares/cpost/src;../Middlewares/easylogger/inc;../Middlewares/easylogger/plugins/flash;../Middlewares/easylogger/port;../Middlewares/sfsm;../Middlewares/sfsm/sfmem;../Middlewares/sfsm/config;../Middlewares/SFUD/sfud/inc;../Drivers/User/Inc;../Middlewares/LetterShell/src;../Middlewares/FlashDB/inc;../Middlewares/FlashDB/port/fal/inc;../Middlewares/FlashDB/port/fal/samples/porting;../Middlewares/perf_counter;../unity/Inc</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32H7xx_HAL_Driver/Inc;../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;../Drivers/CMSIS/Device/ST/STM32H7xx/Include;../Drivers/CMSIS/Include;../Middlewares/cpost/src;../Middlewares/easylogger/inc;../Middlewares/easylogger/plugins/flash;../Middlewares/easylogger/port;../Middlewares/sfsm;../Middlewares/sfsm/sfmem;../Middlewares/sfsm/config;../Middlewares/SFUD/sfud/inc;../Drivers/User/Inc;../Middlewares/LetterShell/src;../Middlewares/FlashDB/inc;../Middlewares/FlashDB/port/fal/inc;../Middlewares/FlashDB/port/fal/samples/porting;../Middlewares/perf_counter;../unity/Inc;..\..\..\com\src</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -1182,19 +1182,9 @@
               <FilePath>..\Drivers\User\Src\common.c</FilePath>
             </File>
             <File>
-              <FileName>kfifo.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Drivers\User\Src\kfifo.c</FilePath>
-            </File>
-            <File>
               <FileName>com_uart_port.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\com_uart_port.c</FilePath>
-            </File>
-            <File>
-              <FileName>com_component.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Drivers\User\Src\com_component.c</FilePath>
             </File>
             <File>
               <FileName>dqueue.c</FileName>
@@ -1207,21 +1197,6 @@
               <FilePath>..\Drivers\User\Src\sht30.c</FilePath>
             </File>
             <File>
-              <FileName>com_component_i2c.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Drivers\User\Src\com_component_i2c.c</FilePath>
-            </File>
-            <File>
-              <FileName>com_component_spi.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Drivers\User\Src\com_component_spi.c</FilePath>
-            </File>
-            <File>
-              <FileName>com_component_uart.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Drivers\User\Src\com_component_uart.c</FilePath>
-            </File>
-            <File>
               <FileName>tim_pwm.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Drivers\User\Src\tim_pwm.c</FilePath>
@@ -1232,9 +1207,29 @@
               <FilePath>..\Drivers\User\Src\ins330.c</FilePath>
             </File>
             <File>
-              <FileName>com_spi_port.c</FileName>
+              <FileName>com_component.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\com_spi_port.c</FilePath>
+              <FilePath>..\..\..\com\src\com_component.c</FilePath>
+            </File>
+            <File>
+              <FileName>com_component_i2c.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\com\src\com_component_i2c.c</FilePath>
+            </File>
+            <File>
+              <FileName>com_component_spi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\com\src\com_component_spi.c</FilePath>
+            </File>
+            <File>
+              <FileName>com_component_uart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\com\src\com_component_uart.c</FilePath>
+            </File>
+            <File>
+              <FileName>kfifo.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\com\src\kfifo.c</FilePath>
             </File>
           </Files>
         </Group>
