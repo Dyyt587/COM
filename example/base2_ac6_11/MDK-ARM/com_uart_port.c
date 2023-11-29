@@ -18,16 +18,48 @@
 	fifo = kfifo_init(buf_#fifo,size,lock);\
 }while(0)
 #define COM_INIT(com,tx_task_size,tx_data_size,rx_task_size,rx_data_size,_type) do{\
-	fifo_static_alloc_DMA(com->tx_queue.datefifo,tx_data_size);\
-	fifo_static_alloc_DMA(com->rx_queue.datefifo,rx_data_size);\
-	fifo_static_alloc(com->tx_queue.taskfifo,tx_task_size);\
-	fifo_static_alloc(com->rx_queue.taskfifo,rx_task_size);\
 	com->type = _type;\
-}while(0)
+	switch(type)\
+		{\
+				case com_type_uart:\
+						fifo_static_alloc_DMA(com->tx_queue.datefifo,tx_data_size);\
+						fifo_static_alloc_DMA(com->rx_queue.datefifo,rx_data_size);\
+						fifo_static_alloc(com->tx_queue.taskfifo,tx_task_size);\
+						fifo_static_alloc(com->rx_queue.taskfifo,rx_task_size);\
+						break;\
+				case com_type_spi:\
+						fifo_static_alloc_DMA(com->tx_queue.datefifo,tx_data_size);\
+						fifo_static_alloc_DMA(com->rx_queue.datefifo,rx_data_size);\
+						fifo_static_alloc(com->rx_queue.taskfifo,max(rx_task_size,tx_task_size));\
+						com->tx_queue.taskfifo = com->rx_queue.taskfifo;\
+						break;\
+				case com_type_i2c:\
+						fifo_static_alloc_DMA(com->tx_queue.datefifo,max(tx_data_size,rx_data_size));\
+						com->rx_queue.datefifo = com->tx_queue.datefifo;\
+						fifo_static_alloc(com->tx_queue.taskfifo,max(tx_task_size,rx_task_size));\
+						com->rx_queue.taskfifo = com->tx_queue.taskfifo;\
+						break;\
+				default:\
+						break;\
+		}\
+	}while(0)
 #else
 #define COM_INIT(com,tx_task_size,tx_data_size,rx_task_size,rx_data_size,type) do{ \ 
 }while(0)
 #endif
+	
+#define COM_TAB	\
+	com11,\
+	com22,\
+
+typedef enum {
+	COM_TAB
+	com_num
+}com_tab;
+
+com_t com[com_num];
+
+
 com_t com1;
  com_t com2;
 // com_t com1;

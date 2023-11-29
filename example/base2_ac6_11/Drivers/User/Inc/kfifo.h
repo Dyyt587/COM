@@ -16,7 +16,12 @@ extern "C"{
                              __typeof__(B) __NSX_PASTE__(__b,L) = (B); \
                              (__NSX_PASTE__(__a,L) < __NSX_PASTE__(__b,L)) ? __NSX_PASTE__(__a,L) : __NSX_PASTE__(__b,L); \
                           })
+#define max(A,B) __NSMAX_IMPL__(A,B,__COUNTER__)
 
+#define __NSMAX_IMPL__(A,B,L) ({ __typeof__(A) __NSX_PASTE__(__a,L) = (A); \
+                             __typeof__(B) __NSX_PASTE__(__b,L) = (B); \
+                             (__NSX_PASTE__(__a,L) > __NSX_PASTE__(__b,L)) ? __NSX_PASTE__(__a,L) : __NSX_PASTE__(__b,L); \
+                          })
 typedef struct{
     int TODO;
 }spinlock_t;
