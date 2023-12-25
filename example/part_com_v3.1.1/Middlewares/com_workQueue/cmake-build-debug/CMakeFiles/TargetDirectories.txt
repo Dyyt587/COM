@@ -1,0 +1,3 @@
+C:/Users/80520/Documents/GitHub/com_workQueue/cmake-build-debug/CMakeFiles/com_workQueue.dir
+C:/Users/80520/Documents/GitHub/com_workQueue/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/80520/Documents/GitHub/com_workQueue/cmake-build-debug/CMakeFiles/rebuild_cache.dir

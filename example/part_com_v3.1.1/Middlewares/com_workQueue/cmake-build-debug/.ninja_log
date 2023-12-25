@@ -1,0 +1,25 @@
+# ninja log v5
+2	80	7249551875123750	build.ninja	dad228bad27d8434
+494	578	7249551539785275	com_workQueue.exe	a98a0ad3da8b38b6
+2	494	7249551539082533	CMakeFiles/com_workQueue.dir/main.c.obj	ffc59038f6bd39bd
+4	86	7249541788775465	CMakeFiles/com_workQueue.dir/src/com_wq.c.obj	3abd95c1c78036a8
+6	110	7249541789005385	CMakeFiles/com_workQueue.dir/example/com.c.obj	2fc9357474a299ce
+5	104	7249541788925323	CMakeFiles/com_workQueue.dir/src/kfifo.c.obj	ca8c89a18aa7d0d4
+7	502	7249541792947665	CMakeFiles/com_workQueue.dir/example/com_port.c.obj	c605777c1874b1c9
+4	461	7249551538762518	CMakeFiles/com_workQueue.dir/test/test_com_iic_communite.c.obj	d10e34802611f48d
+9	514	7249541793067662	CMakeFiles/com_workQueue.dir/test/test_com_init.c.obj	5ca27a82aa7bc402
+13	505	7249541792977690	CMakeFiles/com_workQueue.dir/test/test_com_spi_communite.c.obj	5bec79348b7e25b3
+11	525	7249541793177724	CMakeFiles/com_workQueue.dir/test/test_com_uart_communite.c.obj	dbfff4c361a06afc
+13	87	7249587133671747	CMakeFiles/com_workQueue.dir/example/com_port_tmple.c.obj	4dc9b28f0c480f5e
+7	456	7249587137347873	CMakeFiles/com_workQueue.dir/example/com_port.c.obj	c605777c1874b1c9
+10	465	7249587137437846	CMakeFiles/com_workQueue.dir/test/test_com_uart_communite.c.obj	dbfff4c361a06afc
+6	474	7249587137537868	CMakeFiles/com_workQueue.dir/test/test_com_init.c.obj	5ca27a82aa7bc402
+14	484	7249587137627861	CMakeFiles/com_workQueue.dir/test/test_com_iic_communite.c.obj	d10e34802611f48d
+11	493	7249587137727848	CMakeFiles/com_workQueue.dir/test/test_com_spi_communite.c.obj	5bec79348b7e25b3
+4	509	7249587137852987	CMakeFiles/com_workQueue.dir/main.c.obj	ffc59038f6bd39bd
+2	71	7249587617472494	CMakeFiles/com_workQueue.dir/example/com.c.obj	2fc9357474a299ce
+2	42	7249587853359799	CMakeFiles/com_workQueue.dir/example/com_port_tmple.c.obj	4dc9b28f0c480f5e
+2	47	7249588003074087	CMakeFiles/com_workQueue.dir/example/com_port_tmple.c.obj	4dc9b28f0c480f5e
+48	124	7249588003810774	com_workQueue.exe	f1a0e4c2d233295c
+2	62	7249588048638339	CMakeFiles/com_workQueue.dir/example/com_port_tmple.c.obj	4dc9b28f0c480f5e
+62	132	7249588049338317	com_workQueue.exe	f1a0e4c2d233295c
